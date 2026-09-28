@@ -1,0 +1,2313 @@
+{
+ "c2m-1-injection-molding-casings": {
+  "h": 720,
+  "kb": 1004,
+  "kind": "vid",
+  "slug": "c2m-1-injection-molding-casings",
+  "w": 1280,
+  "widths": [
+   640,
+   1280
+  ]
+ },
+ "c2m-2-glass-sheet-cutting": {
+  "h": 720,
+  "kb": 1493,
+  "kind": "vid",
+  "slug": "c2m-2-glass-sheet-cutting",
+  "w": 1280,
+  "widths": [
+   640,
+   1280
+  ]
+ },
+ "c2m-3-glass-cutting-polishing": {
+  "h": 720,
+  "kb": 1380,
+  "kind": "vid",
+  "slug": "c2m-3-glass-cutting-polishing",
+  "w": 1280,
+  "widths": [
+   640,
+   1280
+  ]
+ },
+ "c2m-4-laser-etching-0-12": {
+  "h": 720,
+  "kb": 457,
+  "kind": "vid",
+  "slug": "c2m-4-laser-etching-0-12",
+  "w": 1280,
+  "widths": [
+   640,
+   1280
+  ]
+ },
+ "c2m-5-unboxing-core-0-20": {
+  "h": 720,
+  "kb": 1805,
+  "kind": "vid",
+  "slug": "c2m-5-unboxing-core-0-20",
+  "w": 1280,
+  "widths": [
+   640,
+   1280
+  ]
+ },
+ "c2m-6-unboxing-core-steel-0-20": {
+  "h": 720,
+  "kb": 1566,
+  "kind": "vid",
+  "slug": "c2m-6-unboxing-core-steel-0-20",
+  "w": 1280,
+  "widths": [
+   640,
+   1280
+  ]
+ },
+ "larkin-app-chronicles-720": {
+  "h": 1560,
+  "kind": "img",
+  "slug": "larkin-app-chronicles-720",
+  "w": 720,
+  "widths": [
+   640,
+   720
+  ]
+ },
+ "larkin-app-day-720": {
+  "h": 1560,
+  "kind": "img",
+  "slug": "larkin-app-day-720",
+  "w": 720,
+  "widths": [
+   640,
+   720
+  ]
+ },
+ "larkin-band-desk-1200": {
+  "h": 1607,
+  "kind": "img",
+  "slug": "larkin-band-desk-1200",
+  "w": 1200,
+  "widths": [
+   640,
+   1200
+  ]
+ },
+ "larkin-band-ring-1200": {
+  "h": 675,
+  "kind": "img",
+  "slug": "larkin-band-ring-1200",
+  "w": 1200,
+  "widths": [
+   640,
+   1200
+  ]
+ },
+ "larkin-band-sill-700": {
+  "h": 937,
+  "kind": "img",
+  "slug": "larkin-band-sill-700",
+  "w": 700,
+  "widths": [
+   640,
+   700
+  ]
+ },
+ "larkin-band-wrist-white-1400": {
+  "h": 781,
+  "kind": "img",
+  "slug": "larkin-band-wrist-white-1400",
+  "w": 1400,
+  "widths": [
+   640,
+   1280,
+   1400
+  ]
+ },
+ "ryder-01-app-ryder": {
+  "h": 2445,
+  "kind": "img",
+  "slug": "ryder-01-app-ryder",
+  "w": 4000,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-02-product-shot": {
+  "h": 2336,
+  "kind": "img",
+  "slug": "ryder-02-product-shot",
+  "w": 3497,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-03": {
+  "h": 917,
+  "kind": "img",
+  "slug": "ryder-03",
+  "w": 1332,
+  "widths": [
+   640,
+   1280,
+   1332
+  ]
+ },
+ "ryder-04-2026-07-03-5-28-51-pm": {
+  "h": 1954,
+  "kind": "img",
+  "slug": "ryder-04-2026-07-03-5-28-51-pm",
+  "w": 2884,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-05-2026-07-03-3-47-16-pm": {
+  "h": 1790,
+  "kind": "img",
+  "slug": "ryder-05-2026-07-03-3-47-16-pm",
+  "w": 2736,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-06": {
+  "h": 1254,
+  "kind": "img",
+  "slug": "ryder-06",
+  "w": 1820,
+  "widths": [
+   640,
+   1280,
+   1820
+  ]
+ },
+ "ryder-07-2026-07-03-3-49-16-pm": {
+  "h": 978,
+  "kind": "img",
+  "slug": "ryder-07-2026-07-03-3-49-16-pm",
+  "w": 1478,
+  "widths": [
+   640,
+   1280,
+   1478
+  ]
+ },
+ "ryder-08-2026-07-03-3-49-56-pm": {
+  "h": 1954,
+  "kind": "img",
+  "slug": "ryder-08-2026-07-03-3-49-56-pm",
+  "w": 3028,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-09-2026-07-03-3-50-08-pm": {
+  "h": 2024,
+  "kind": "img",
+  "slug": "ryder-09-2026-07-03-3-50-08-pm",
+  "w": 3052,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-10-dscf9812": {
+  "h": 1225,
+  "kind": "img",
+  "slug": "ryder-10-dscf9812",
+  "w": 2048,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-11-rendering": {
+  "h": 1772,
+  "kind": "img",
+  "slug": "ryder-11-rendering",
+  "w": 3144,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-12-drawing3": {
+  "h": 1772,
+  "kind": "img",
+  "slug": "ryder-12-drawing3",
+  "w": 3146,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-13-prototyping2": {
+  "h": 2080,
+  "kind": "img",
+  "slug": "ryder-13-prototyping2",
+  "w": 3120,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-14": {
+  "h": 1675,
+  "kind": "img",
+  "slug": "ryder-14",
+  "w": 1290,
+  "widths": [
+   640,
+   1280,
+   1290
+  ]
+ },
+ "ryder-15-design-process": {
+  "h": 1940,
+  "kind": "img",
+  "slug": "ryder-15-design-process",
+  "w": 3120,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-16-dscf1015": {
+  "h": 2080,
+  "kind": "img",
+  "slug": "ryder-16-dscf1015",
+  "w": 3120,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-17-2026-04-19-7-09-17-pm": {
+  "h": 1688,
+  "kind": "img",
+  "slug": "ryder-17-2026-04-19-7-09-17-pm",
+  "w": 2770,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-18-2026-04-19-6-43-12-pm": {
+  "h": 1930,
+  "kind": "img",
+  "slug": "ryder-18-2026-04-19-6-43-12-pm",
+  "w": 2970,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-19-img-0817": {
+  "h": 4032,
+  "kind": "img",
+  "slug": "ryder-19-img-0817",
+  "w": 3024,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-20-2026-04-19-7-11-59-pm": {
+  "h": 1742,
+  "kind": "img",
+  "slug": "ryder-20-2026-04-19-7-11-59-pm",
+  "w": 2486,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-2023-08-11-9-23-34-pm": {
+  "h": 1830,
+  "kind": "img",
+  "slug": "ryder-2023-08-11-9-23-34-pm",
+  "w": 2754,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-21-dscf0876": {
+  "h": 2080,
+  "kind": "img",
+  "slug": "ryder-21-dscf0876",
+  "w": 3120,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-22-2026-07-03-10-32-26-pm": {
+  "h": 2026,
+  "kind": "img",
+  "slug": "ryder-22-2026-07-03-10-32-26-pm",
+  "w": 3060,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-23-2026-07-03-10-26-26-pm": {
+  "h": 1954,
+  "kind": "img",
+  "slug": "ryder-23-2026-07-03-10-26-26-pm",
+  "w": 3512,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-24-2026-07-03-9-33-05-pm": {
+  "h": 2000,
+  "kind": "img",
+  "slug": "ryder-24-2026-07-03-9-33-05-pm",
+  "w": 3044,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-25": {
+  "h": 1329,
+  "kind": "img",
+  "slug": "ryder-25",
+  "w": 1824,
+  "widths": [
+   640,
+   1280,
+   1824
+  ]
+ },
+ "ryder-30-team-pic": {
+  "h": 1333,
+  "kind": "img",
+  "slug": "ryder-30-team-pic",
+  "w": 2000,
+  "widths": [
+   640,
+   1280,
+   2000
+  ]
+ },
+ "ryder-32-julien11-2": {
+  "h": 1000,
+  "kind": "img",
+  "slug": "ryder-32-julien11-2",
+  "w": 1000,
+  "widths": [
+   640,
+   1000
+  ]
+ },
+ "ryder-img-0628": {
+  "h": 4284,
+  "kind": "img",
+  "slug": "ryder-img-0628",
+  "w": 5712,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-img-0644": {
+  "h": 4284,
+  "kind": "img",
+  "slug": "ryder-img-0644",
+  "w": 5712,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-img-1122": {
+  "h": 5712,
+  "kind": "img",
+  "slug": "ryder-img-1122",
+  "w": 4284,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-img-1980": {
+  "h": 1280,
+  "kb": 645,
+  "kind": "vid",
+  "slug": "ryder-img-1980",
+  "w": 960,
+  "widths": [
+   640,
+   960
+  ]
+ },
+ "ryder-img-2412": {
+  "h": 5712,
+  "kind": "img",
+  "slug": "ryder-img-2412",
+  "w": 4284,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-img-2640": {
+  "h": 960,
+  "kb": 259,
+  "kind": "vid",
+  "slug": "ryder-img-2640",
+  "w": 1280,
+  "widths": [
+   640,
+   1280
+  ]
+ },
+ "ryder-img-2667": {
+  "h": 4284,
+  "kind": "img",
+  "slug": "ryder-img-2667",
+  "w": 5712,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-img-2734": {
+  "h": 4032,
+  "kind": "img",
+  "slug": "ryder-img-2734",
+  "w": 3024,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-img-3185": {
+  "h": 4284,
+  "kind": "img",
+  "slug": "ryder-img-3185",
+  "w": 5712,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-img-4411": {
+  "h": 4284,
+  "kind": "img",
+  "slug": "ryder-img-4411",
+  "w": 5712,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-img-4604": {
+  "h": 4284,
+  "kind": "img",
+  "slug": "ryder-img-4604",
+  "w": 5712,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-img-4979": {
+  "h": 4284,
+  "kind": "img",
+  "slug": "ryder-img-4979",
+  "w": 5712,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-img-5004-0-10": {
+  "h": 720,
+  "kb": 1745,
+  "kind": "vid",
+  "slug": "ryder-img-5004-0-10",
+  "w": 1280,
+  "widths": [
+   640,
+   1280
+  ]
+ },
+ "ryder-img-5012-14-10": {
+  "h": 720,
+  "kb": 1419,
+  "kind": "vid",
+  "slug": "ryder-img-5012-14-10",
+  "w": 1280,
+  "widths": [
+   640,
+   1280
+  ]
+ },
+ "ryder-img-9882": {
+  "h": 3024,
+  "kind": "img",
+  "slug": "ryder-img-9882",
+  "w": 4032,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "ryder-img-9883-0-10": {
+  "h": 720,
+  "kb": 1699,
+  "kind": "vid",
+  "slug": "ryder-img-9883-0-10",
+  "w": 1280,
+  "widths": [
+   640,
+   1280
+  ]
+ },
+ "soundbrenner-01-screen-shot-2022-11-17-at-10-40-32-am": {
+  "h": 2683,
+  "kind": "img",
+  "slug": "soundbrenner-01-screen-shot-2022-11-17-at-10-40-32-am",
+  "w": 2000,
+  "widths": [
+   640,
+   1280,
+   2000
+  ]
+ },
+ "soundbrenner-02-rw-1920": {
+  "h": 1121,
+  "kind": "img",
+  "slug": "soundbrenner-02-rw-1920",
+  "w": 2000,
+  "widths": [
+   640,
+   1280,
+   2000
+  ]
+ },
+ "soundbrenner-03-straps-lineup-core": {
+  "h": 664,
+  "kind": "img",
+  "slug": "soundbrenner-03-straps-lineup-core",
+  "w": 2048,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "soundbrenner-04-gif5": {
+  "h": 394,
+  "kb": 141,
+  "kind": "vid",
+  "slug": "soundbrenner-04-gif5",
+  "w": 700,
+  "widths": [
+   640,
+   700
+  ]
+ },
+ "soundbrenner-05": {
+  "h": 394,
+  "kb": 90,
+  "kind": "vid",
+  "slug": "soundbrenner-05",
+  "w": 700,
+  "widths": [
+   640,
+   700
+  ]
+ },
+ "soundbrenner-09-mechanical0": {
+  "h": 375,
+  "kind": "img",
+  "slug": "soundbrenner-09-mechanical0",
+  "w": 500,
+  "widths": [
+   500
+  ]
+ },
+ "soundbrenner-10-mechanical-2": {
+  "h": 780,
+  "kind": "img",
+  "slug": "soundbrenner-10-mechanical-2",
+  "w": 1040,
+  "widths": [
+   640,
+   1040
+  ]
+ },
+ "soundbrenner-11-mechanical-1": {
+  "h": 788,
+  "kind": "img",
+  "slug": "soundbrenner-11-mechanical-1",
+  "w": 1050,
+  "widths": [
+   640,
+   1050
+  ]
+ },
+ "soundbrenner-12-rw-3840": {
+  "h": 1500,
+  "kind": "img",
+  "slug": "soundbrenner-12-rw-3840",
+  "w": 2000,
+  "widths": [
+   640,
+   1280,
+   2000
+  ]
+ },
+ "soundbrenner-13-3dprint-tests": {
+  "h": 1391,
+  "kind": "img",
+  "slug": "soundbrenner-13-3dprint-tests",
+  "w": 1855,
+  "widths": [
+   640,
+   1280,
+   1855
+  ]
+ },
+ "soundbrenner-14-screen-shot-2022-11-17-at-10-34-24-am": {
+  "h": 1502,
+  "kind": "img",
+  "slug": "soundbrenner-14-screen-shot-2022-11-17-at-10-34-24-am",
+  "w": 2000,
+  "widths": [
+   640,
+   1280,
+   2000
+  ]
+ },
+ "soundbrenner-15-mechanical-3": {
+  "h": 904,
+  "kind": "img",
+  "slug": "soundbrenner-15-mechanical-3",
+  "w": 1206,
+  "widths": [
+   640,
+   1206
+  ]
+ },
+ "soundbrenner-16-material-choice": {
+  "h": 1240,
+  "kind": "img",
+  "slug": "soundbrenner-16-material-choice",
+  "w": 1653,
+  "widths": [
+   640,
+   1280,
+   1653
+  ]
+ },
+ "soundbrenner-17-design-review-dfm": {
+  "h": 1537,
+  "kind": "img",
+  "slug": "soundbrenner-17-design-review-dfm",
+  "w": 2049,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "soundbrenner-18-steel-1-1": {
+  "h": 1074,
+  "kind": "img",
+  "slug": "soundbrenner-18-steel-1-1",
+  "w": 1432,
+  "widths": [
+   640,
+   1280,
+   1432
+  ]
+ },
+ "soundbrenner-19-board": {
+  "h": 1451,
+  "kind": "img",
+  "slug": "soundbrenner-19-board",
+  "w": 1935,
+  "widths": [
+   640,
+   1280,
+   1935
+  ]
+ },
+ "soundbrenner-20-module": {
+  "h": 1331,
+  "kind": "img",
+  "slug": "soundbrenner-20-module",
+  "w": 1774,
+  "widths": [
+   640,
+   1280,
+   1774
+  ]
+ },
+ "soundbrenner-21-pcb": {
+  "h": 1512,
+  "kind": "img",
+  "slug": "soundbrenner-21-pcb",
+  "w": 2016,
+  "widths": [
+   640,
+   1280,
+   2016
+  ]
+ },
+ "soundbrenner-22-electronics-testing-1": {
+  "h": 968,
+  "kind": "img",
+  "slug": "soundbrenner-22-electronics-testing-1",
+  "w": 1290,
+  "widths": [
+   640,
+   1280,
+   1290
+  ]
+ },
+ "soundbrenner-23-process-build": {
+  "h": 1482,
+  "kind": "img",
+  "slug": "soundbrenner-23-process-build",
+  "w": 1976,
+  "widths": [
+   640,
+   1280,
+   1976
+  ]
+ },
+ "soundbrenner-24-packaging-firststep": {
+  "h": 1361,
+  "kind": "img",
+  "slug": "soundbrenner-24-packaging-firststep",
+  "w": 1361,
+  "widths": [
+   640,
+   1280,
+   1361
+  ]
+ },
+ "soundbrenner-25-process-packaging-mockup": {
+  "h": 1353,
+  "kind": "img",
+  "slug": "soundbrenner-25-process-packaging-mockup",
+  "w": 1353,
+  "widths": [
+   640,
+   1280,
+   1353
+  ]
+ },
+ "soundbrenner-26-process-prototype-packaging": {
+  "h": 1489,
+  "kind": "img",
+  "slug": "soundbrenner-26-process-prototype-packaging",
+  "w": 1489,
+  "widths": [
+   640,
+   1280,
+   1489
+  ]
+ },
+ "soundbrenner-27-pen-packaging": {
+  "h": 1223,
+  "kind": "img",
+  "slug": "soundbrenner-27-pen-packaging",
+  "w": 1223,
+  "widths": [
+   640,
+   1223
+  ]
+ },
+ "soundbrenner-28-process-packaging": {
+  "h": 1048,
+  "kind": "img",
+  "slug": "soundbrenner-28-process-packaging",
+  "w": 1047,
+  "widths": [
+   640,
+   1047
+  ]
+ },
+ "soundbrenner-29-process-prototype": {
+  "h": 1375,
+  "kind": "img",
+  "slug": "soundbrenner-29-process-prototype",
+  "w": 1833,
+  "widths": [
+   640,
+   1280,
+   1833
+  ]
+ },
+ "soundbrenner-30-iterated-prototype": {
+  "h": 1142,
+  "kind": "img",
+  "slug": "soundbrenner-30-iterated-prototype",
+  "w": 1523,
+  "widths": [
+   640,
+   1280,
+   1523
+  ]
+ },
+ "soundbrenner-31-qc-tests-1-scaled": {
+  "h": 1517,
+  "kind": "img",
+  "slug": "soundbrenner-31-qc-tests-1-scaled",
+  "w": 2048,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "soundbrenner-32-process-prototype-3": {
+  "h": 902,
+  "kind": "img",
+  "slug": "soundbrenner-32-process-prototype-3",
+  "w": 1203,
+  "widths": [
+   640,
+   1203
+  ]
+ },
+ "soundbrenner-33-first-build": {
+  "h": 1270,
+  "kind": "img",
+  "slug": "soundbrenner-33-first-build",
+  "w": 1693,
+  "widths": [
+   640,
+   1280,
+   1693
+  ]
+ },
+ "soundbrenner-34-img-20190517-120014-1": {
+  "h": 1500,
+  "kind": "img",
+  "slug": "soundbrenner-34-img-20190517-120014-1",
+  "w": 2000,
+  "widths": [
+   640,
+   1280,
+   2000
+  ]
+ },
+ "soundbrenner-35-img-20190517-120137": {
+  "h": 1545,
+  "kind": "img",
+  "slug": "soundbrenner-35-img-20190517-120137",
+  "w": 2000,
+  "widths": [
+   640,
+   1280,
+   2000
+  ]
+ },
+ "soundbrenner-36-img-20190517-120147": {
+  "h": 1526,
+  "kind": "img",
+  "slug": "soundbrenner-36-img-20190517-120147",
+  "w": 2000,
+  "widths": [
+   640,
+   1280,
+   2000
+  ]
+ },
+ "soundbrenner-37-img-20190517-152904-1-25-39-am": {
+  "h": 1500,
+  "kind": "img",
+  "slug": "soundbrenner-37-img-20190517-152904-1-25-39-am",
+  "w": 2000,
+  "widths": [
+   640,
+   1280,
+   2000
+  ]
+ },
+ "soundbrenner-38-img-20190517-143641": {
+  "h": 1500,
+  "kind": "img",
+  "slug": "soundbrenner-38-img-20190517-143641",
+  "w": 2000,
+  "widths": [
+   640,
+   1280,
+   2000
+  ]
+ },
+ "soundbrenner-39-img-20190517-154259": {
+  "h": 1500,
+  "kind": "img",
+  "slug": "soundbrenner-39-img-20190517-154259",
+  "w": 2000,
+  "widths": [
+   640,
+   1280,
+   2000
+  ]
+ },
+ "soundbrenner-40-img-20190517-141812": {
+  "h": 1500,
+  "kind": "img",
+  "slug": "soundbrenner-40-img-20190517-141812",
+  "w": 2000,
+  "widths": [
+   640,
+   1280,
+   2000
+  ]
+ },
+ "soundbrenner-41-mass-production-materials": {
+  "h": 1270,
+  "kind": "img",
+  "slug": "soundbrenner-41-mass-production-materials",
+  "w": 1693,
+  "widths": [
+   640,
+   1280,
+   1693
+  ]
+ },
+ "soundbrenner-42-process-assembly": {
+  "h": 1444,
+  "kind": "img",
+  "slug": "soundbrenner-42-process-assembly",
+  "w": 1925,
+  "widths": [
+   640,
+   1280,
+   1925
+  ]
+ },
+ "soundbrenner-43-process-fixture1": {
+  "h": 1482,
+  "kind": "img",
+  "slug": "soundbrenner-43-process-fixture1",
+  "w": 1976,
+  "widths": [
+   640,
+   1280,
+   1976
+  ]
+ },
+ "soundbrenner-44-process-assembly3": {
+  "h": 1515,
+  "kind": "img",
+  "slug": "soundbrenner-44-process-assembly3",
+  "w": 2020,
+  "widths": [
+   640,
+   1280,
+   2020
+  ]
+ },
+ "soundbrenner-45-mass-production-testing-table": {
+  "h": 1031,
+  "kind": "img",
+  "slug": "soundbrenner-45-mass-production-testing-table",
+  "w": 1375,
+  "widths": [
+   640,
+   1280,
+   1375
+  ]
+ },
+ "soundbrenner-46-processs-assembly2": {
+  "h": 1235,
+  "kind": "img",
+  "slug": "soundbrenner-46-processs-assembly2",
+  "w": 1647,
+  "widths": [
+   640,
+   1280,
+   1647
+  ]
+ },
+ "soundbrenner-47-process-shipping2": {
+  "h": 1128,
+  "kind": "img",
+  "slug": "soundbrenner-47-process-shipping2",
+  "w": 1504,
+  "widths": [
+   640,
+   1280,
+   1504
+  ]
+ },
+ "soundbrenner-48-mass-production-shipping": {
+  "h": 1222,
+  "kind": "img",
+  "slug": "soundbrenner-48-mass-production-shipping",
+  "w": 1715,
+  "widths": [
+   640,
+   1280,
+   1715
+  ]
+ },
+ "soundbrenner-49-manufacturing-steel-scaled": {
+  "h": 1049,
+  "kind": "img",
+  "slug": "soundbrenner-49-manufacturing-steel-scaled",
+  "w": 2048,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "soundbrenner-50-2022-10-30-10-20-27-pm": {
+  "h": 1119,
+  "kind": "img",
+  "slug": "soundbrenner-50-2022-10-30-10-20-27-pm",
+  "w": 2000,
+  "widths": [
+   640,
+   1280,
+   2000
+  ]
+ },
+ "soundbrenner-51-assembly-guitar": {
+  "h": 1238,
+  "kind": "img",
+  "slug": "soundbrenner-51-assembly-guitar",
+  "w": 1651,
+  "widths": [
+   640,
+   1280,
+   1651
+  ]
+ },
+ "soundbrenner-52-testing-1": {
+  "h": 1512,
+  "kind": "img",
+  "slug": "soundbrenner-52-testing-1",
+  "w": 2016,
+  "widths": [
+   640,
+   1280,
+   2016
+  ]
+ },
+ "soundbrenner-53-management-team": {
+  "h": 1052,
+  "kind": "img",
+  "slug": "soundbrenner-53-management-team",
+  "w": 2048,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "soundbrenner-54-2020-07-01-steel-1-scaled": {
+  "h": 1146,
+  "kind": "img",
+  "slug": "soundbrenner-54-2020-07-01-steel-1-scaled",
+  "w": 2048,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "soundbrenner-55-2020-07-01-straps2": {
+  "h": 1735,
+  "kind": "img",
+  "slug": "soundbrenner-55-2020-07-01-straps2",
+  "w": 3000,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "soundbrenner-56-steel-closeup-scaled": {
+  "h": 1280,
+  "kind": "img",
+  "slug": "soundbrenner-56-steel-closeup-scaled",
+  "w": 2048,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "soundbrenner-57-dscf3458": {
+  "h": 1333,
+  "kind": "img",
+  "slug": "soundbrenner-57-dscf3458",
+  "w": 2000,
+  "widths": [
+   640,
+   1280,
+   2000
+  ]
+ },
+ "soundbrenner-58-steel-plastoc": {
+  "h": 1360,
+  "kind": "img",
+  "slug": "soundbrenner-58-steel-plastoc",
+  "w": 2048,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "soundbrenner-59-sidesteel": {
+  "h": 1347,
+  "kind": "img",
+  "slug": "soundbrenner-59-sidesteel",
+  "w": 2048,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "soundbrenner-60-assembly1-scaled": {
+  "h": 1053,
+  "kind": "img",
+  "slug": "soundbrenner-60-assembly1-scaled",
+  "w": 2048,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "soundbrenner-61-tuner-plastic2": {
+  "h": 1273,
+  "kind": "img",
+  "slug": "soundbrenner-61-tuner-plastic2",
+  "w": 1910,
+  "widths": [
+   640,
+   1280,
+   1910
+  ]
+ },
+ "soundbrenner-62-tuner": {
+  "h": 1349,
+  "kind": "img",
+  "slug": "soundbrenner-62-tuner",
+  "w": 2048,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "soundbrenner-63-tuner-plastic1": {
+  "h": 1346,
+  "kind": "img",
+  "slug": "soundbrenner-63-tuner-plastic1",
+  "w": 2048,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "soundbrenner-64-bass3": {
+  "h": 1365,
+  "kind": "img",
+  "slug": "soundbrenner-64-bass3",
+  "w": 2048,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "soundbrenner-65-live-drums": {
+  "h": 1338,
+  "kind": "img",
+  "slug": "soundbrenner-65-live-drums",
+  "w": 2048,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "soundbrenner-66-db-meter-scaled": {
+  "h": 1280,
+  "kind": "img",
+  "slug": "soundbrenner-66-db-meter-scaled",
+  "w": 2048,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "transcelestial-20220616-105129": {
+  "h": 4000,
+  "kind": "img",
+  "slug": "transcelestial-20220616-105129",
+  "w": 3000,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "transcelestial-aip-edi-transcelestial-2022-06-16-fr-003": {
+  "h": 5504,
+  "kind": "img",
+  "slug": "transcelestial-aip-edi-transcelestial-2022-06-16-fr-003",
+  "w": 8256,
+  "widths": [
+   640,
+   1280,
+   2048
+  ]
+ },
+ "writing-4-key-lessons-01": {
+  "h": 696,
+  "kind": "img",
+  "slug": "writing-4-key-lessons-01",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-4-key-lessons-02": {
+  "h": 694,
+  "kind": "img",
+  "slug": "writing-4-key-lessons-02",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-4-key-lessons-03": {
+  "h": 692,
+  "kind": "img",
+  "slug": "writing-4-key-lessons-03",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-4-key-lessons-cover-01": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-4-key-lessons-cover-01",
+  "w": 1152,
+  "widths": [
+   640,
+   1152
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-01": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-01",
+  "w": 572,
+  "widths": [
+   572
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-02": {
+  "h": 765,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-02",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-03": {
+  "h": 442,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-03",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-04": {
+  "h": 394,
+  "kb": 141,
+  "kind": "vid",
+  "slug": "writing-from-concept-phase-to-manufacturing-04",
+  "w": 700,
+  "widths": [
+   640,
+   700
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-05": {
+  "h": 394,
+  "kb": 90,
+  "kind": "vid",
+  "slug": "writing-from-concept-phase-to-manufacturing-05",
+  "w": 700,
+  "widths": [
+   640,
+   700
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-06": {
+  "h": 151,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-06",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-07": {
+  "h": 261,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-07",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-08": {
+  "h": 363,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-08",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-09": {
+  "h": 375,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-09",
+  "w": 500,
+  "widths": [
+   500
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-10": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-10",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-11": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-11",
+  "w": 1023,
+  "widths": [
+   640,
+   1023
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-12": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-12",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-13": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-13",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-14": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-14",
+  "w": 1022,
+  "widths": [
+   640,
+   1022
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-15": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-15",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-16": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-16",
+  "w": 1023,
+  "widths": [
+   640,
+   1023
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-17": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-17",
+  "w": 1023,
+  "widths": [
+   640,
+   1023
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-18": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-18",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-19": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-19",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-20": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-20",
+  "w": 1023,
+  "widths": [
+   640,
+   1023
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-21": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-21",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-22": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-22",
+  "w": 1023,
+  "widths": [
+   640,
+   1023
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-23": {
+  "h": 1440,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-23",
+  "w": 1920,
+  "widths": [
+   640,
+   1280,
+   1920
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-24": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-24",
+  "w": 768,
+  "widths": [
+   640,
+   768
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-25": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-25",
+  "w": 768,
+  "widths": [
+   640,
+   768
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-26": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-26",
+  "w": 768,
+  "widths": [
+   640,
+   768
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-27": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-27",
+  "w": 768,
+  "widths": [
+   640,
+   768
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-28": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-28",
+  "w": 767,
+  "widths": [
+   640,
+   767
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-29": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-29",
+  "w": 1023,
+  "widths": [
+   640,
+   1023
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-30": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-30",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-31": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-31",
+  "w": 1036,
+  "widths": [
+   640,
+   1036
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-32": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-32",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-33": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-33",
+  "w": 1023,
+  "widths": [
+   640,
+   1023
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-34": {
+  "h": 1440,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-34",
+  "w": 1920,
+  "widths": [
+   640,
+   1280,
+   1920
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-35": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-35",
+  "w": 994,
+  "widths": [
+   640,
+   994
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-36": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-36",
+  "w": 1006,
+  "widths": [
+   640,
+   1006
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-37": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-37",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-38": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-38",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-39": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-39",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-40": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-40",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-44": {
+  "h": 720,
+  "kb": 914,
+  "kind": "vid",
+  "slug": "writing-from-concept-phase-to-manufacturing-44",
+  "w": 1280,
+  "widths": [
+   640,
+   1280
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-45": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-45",
+  "w": 1023,
+  "widths": [
+   640,
+   1023
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-46": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-46",
+  "w": 1023,
+  "widths": [
+   640,
+   1023
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-47": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-47",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-48": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-48",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-49": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-49",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-50": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-50",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-51": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-51",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-52": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-52",
+  "w": 1077,
+  "widths": [
+   640,
+   1077
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-53": {
+  "h": 699,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-53",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-54": {
+  "h": 764,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-54",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-55": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-55",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-56": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-56",
+  "w": 1024,
+  "widths": [
+   640,
+   1024
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-57": {
+  "h": 701,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-57",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-58": {
+  "h": 764,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-58",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-59": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-59",
+  "w": 1327,
+  "widths": [
+   640,
+   1280,
+   1327
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-60": {
+  "h": 720,
+  "kb": 3178,
+  "kind": "vid",
+  "slug": "writing-from-concept-phase-to-manufacturing-60",
+  "w": 1280,
+  "widths": [
+   640,
+   1280
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-61": {
+  "h": 720,
+  "kb": 3252,
+  "kind": "vid",
+  "slug": "writing-from-concept-phase-to-manufacturing-61",
+  "w": 1280,
+  "widths": [
+   640,
+   1280
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-62": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-62",
+  "w": 1228,
+  "widths": [
+   640,
+   1228
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-63": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-63",
+  "w": 1152,
+  "widths": [
+   640,
+   1152
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-64": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-64",
+  "w": 1156,
+  "widths": [
+   640,
+   1156
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-65": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-65",
+  "w": 1167,
+  "widths": [
+   640,
+   1167
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-66": {
+  "h": 702,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-66",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-67": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-67",
+  "w": 1152,
+  "widths": [
+   640,
+   1152
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-68": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-68",
+  "w": 1165,
+  "widths": [
+   640,
+   1165
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-69": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-69",
+  "w": 1168,
+  "widths": [
+   640,
+   1168
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-70": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-70",
+  "w": 1152,
+  "widths": [
+   640,
+   1152
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-71": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-71",
+  "w": 1175,
+  "widths": [
+   640,
+   1175
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-72": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-72",
+  "w": 1228,
+  "widths": [
+   640,
+   1228
+  ]
+ },
+ "writing-from-concept-phase-to-manufacturing-cover-01": {
+  "h": 702,
+  "kind": "img",
+  "slug": "writing-from-concept-phase-to-manufacturing-cover-01",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-ledger-nano-x-01": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-01",
+  "w": 1152,
+  "widths": [
+   640,
+   1152
+  ]
+ },
+ "writing-ledger-nano-x-02": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-02",
+  "w": 1152,
+  "widths": [
+   640,
+   1152
+  ]
+ },
+ "writing-ledger-nano-x-03": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-03",
+  "w": 1152,
+  "widths": [
+   640,
+   1152
+  ]
+ },
+ "writing-ledger-nano-x-04": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-04",
+  "w": 1152,
+  "widths": [
+   640,
+   1152
+  ]
+ },
+ "writing-ledger-nano-x-05": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-05",
+  "w": 1152,
+  "widths": [
+   640,
+   1152
+  ]
+ },
+ "writing-ledger-nano-x-06": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-06",
+  "w": 1152,
+  "widths": [
+   640,
+   1152
+  ]
+ },
+ "writing-ledger-nano-x-07": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-07",
+  "w": 1151,
+  "widths": [
+   640,
+   1151
+  ]
+ },
+ "writing-ledger-nano-x-08": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-08",
+  "w": 1152,
+  "widths": [
+   640,
+   1152
+  ]
+ },
+ "writing-ledger-nano-x-09": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-09",
+  "w": 1152,
+  "widths": [
+   640,
+   1152
+  ]
+ },
+ "writing-ledger-nano-x-10": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-10",
+  "w": 1152,
+  "widths": [
+   640,
+   1152
+  ]
+ },
+ "writing-ledger-nano-x-11": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-11",
+  "w": 1177,
+  "widths": [
+   640,
+   1177
+  ]
+ },
+ "writing-ledger-nano-x-12": {
+  "h": 764,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-12",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-ledger-nano-x-13": {
+  "h": 767,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-13",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-ledger-nano-x-14": {
+  "h": 767,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-14",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-ledger-nano-x-15": {
+  "h": 766,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-15",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-ledger-nano-x-16": {
+  "h": 764,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-16",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "writing-ledger-nano-x-17": {
+  "h": 768,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-17",
+  "w": 511,
+  "widths": [
+   511
+  ]
+ },
+ "writing-ledger-nano-x-cover-01": {
+  "h": 764,
+  "kind": "img",
+  "slug": "writing-ledger-nano-x-cover-01",
+  "w": 1366,
+  "widths": [
+   640,
+   1280,
+   1366
+  ]
+ },
+ "yt-ayknj0h0--4": {
+  "h": 720,
+  "kind": "img",
+  "slug": "yt-ayknj0h0--4",
+  "w": 1280,
+  "widths": [
+   640,
+   1280
+  ]
+ },
+ "yt-cqppfx0cwsi": {
+  "h": 720,
+  "kind": "img",
+  "slug": "yt-cqppfx0cwsi",
+  "w": 1280,
+  "widths": [
+   640,
+   1280
+  ]
+ },
+ "yt-dibupqcwcp4": {
+  "h": 720,
+  "kind": "img",
+  "slug": "yt-dibupqcwcp4",
+  "w": 1280,
+  "widths": [
+   640,
+   1280
+  ]
+ },
+ "yt-wxozgluw5gi": {
+  "h": 720,
+  "kind": "img",
+  "slug": "yt-wxozgluw5gi",
+  "w": 1280,
+  "widths": [
+   640,
+   1280
+  ]
+ },
+ "yt-zngelialumy": {
+  "h": 360,
+  "kind": "img",
+  "slug": "yt-zngelialumy",
+  "w": 480,
+  "widths": [
+   480
+  ]
+ }
+}
