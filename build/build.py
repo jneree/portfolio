@@ -38,6 +38,7 @@ ROOTS = {
     "c2m": DL / "julneree-concept-to-manufacturing" / "videos",
     "larkin": BUILD / "sources" / "larkin",
     "writing": BUILD / "sources" / "writing",
+    "dl": DL,
 }
 IMG = ROOT / "img"
 VID = ROOT / "video"
@@ -213,7 +214,8 @@ def tile(item, p=""):
     ar = m["w"] / m["h"]
     inner = video_tag(m, p) if m["kind"] == "vid" else img_tag(m, p, f"{min(round(300 * ar), 1400)}px", item["alt"])
     badge = '<span class="badge mono">Video</span>' if m["kind"] == "vid" else ""
-    return (f'<figure class="tile" style="--ar:{ar:.4f}">'
+    cls = "tile wide" if item.get("wide") else "tile"
+    return (f'<figure class="{cls}" style="--ar:{ar:.4f}">'
             f'<button class="zoom" type="button" {lb_attrs(m, p, item["cap"])} aria-label="Enlarge: {esc(item["cap"])}">'
             f'{inner}{badge}</button>'
             f'<figcaption>{esc(item["cap"])}</figcaption></figure>')

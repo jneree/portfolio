@@ -163,6 +163,7 @@ body[data-filter] .work { margin-top: 28px; }
 }
 .strip::-webkit-scrollbar { display: none; }
 .tile { flex: 0 0 auto; width: calc(var(--tile-h) * var(--ar)); max-width: 86vw; scroll-snap-align: start; }
+.tile.wide { --tile-h: clamp(230px, 34vw, 480px); }
 .tile img, .tile video { width: 100%; height: var(--tile-h); object-fit: cover; background: var(--soft); }
 .tile figcaption { max-width: max(100%, 220px); padding-right: 8px; }
 .zoom { position: relative; display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
@@ -290,6 +291,7 @@ body[data-filter] .work { margin-top: 28px; }
 }
 @media (max-width: 640px) {
   :root { --gutter: 16px; --tile-h: 230px; }
+  .tile.wide { --tile-h: calc(86vw / var(--ar)); }
   .facts { grid-template-columns: 1fr; }
   .loops { grid-template-columns: 1fr; }
   .yt-grid { grid-template-columns: 1fr; }

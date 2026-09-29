@@ -4,6 +4,7 @@ Image paths are relative to one of the source roots in build.py:
   "Ryder/...", "Soundbrenner/...", "Transcelestial/..."  -> ~/Downloads/julneree.com images
   "c2m/..."                                              -> ~/Downloads/julneree-concept-to-manufacturing/videos
   "larkin/...", "writing/..."                            -> build/sources
+  "dl/..."                                               -> ~/Downloads
 Edit captions or reorder items, then run `python build/build.py`.
 """
 
@@ -12,8 +13,8 @@ def img(src, cap="", alt=None):
     return {"type": "img", "src": src, "cap": cap, "alt": alt or cap}
 
 
-def vid(src, cap="", start=0, dur=None):
-    return {"type": "vid", "src": src, "cap": cap, "start": start, "dur": dur}
+def vid(src, cap="", start=0, dur=None, wide=False):
+    return {"type": "vid", "src": src, "cap": cap, "start": start, "dur": dur, "wide": wide}
 
 
 SITE = {
@@ -175,6 +176,10 @@ COMPANIES = [
                 img("Ryder/IMG_3185.JPG", "Design review with our supplier's engineers."),
                 img("Ryder/IMG_4604.JPG", "Lunch with a supplier."),
                 img("Ryder/IMG_4979.JPG", "Team dinner after a build."),
+            ],
+            "unboxing": [
+                vid("dl/unboxing-Ryder.mp4", "Unboxing Ryder One: the device, wireless charger plate, "
+                    "cable, carrying pouch and Recovery Tags.", wide=True),
             ],
         },
     },
