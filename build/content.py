@@ -9,8 +9,9 @@ Edit captions or reorder items, then run `python build/build.py`.
 """
 
 
-def img(src, cap="", alt=None):
-    return {"type": "img", "src": src, "cap": cap, "alt": alt or cap}
+def img(src, cap="", alt=None, crop=None):
+    """crop: optional (left, top, right, bottom) in pixels of the original."""
+    return {"type": "img", "src": src, "cap": cap, "alt": alt or cap, "crop": crop}
 
 
 def vid(src, cap="", start=0, dur=None, wide=False):
@@ -24,15 +25,16 @@ SITE = {
     "url": "https://julneree.com/",
     "name": "Julien Nérée",
     "statement": "I take hardware from the first sketch to mass production.",
-    "sub": "Product engineer and designer from France, based in Singapore. Ten years building "
-           "consumer electronics between Hong Kong, Shenzhen and Singapore: industrial design, "
+    "sub": "French product engineer and designer, based in Singapore. Ten years building "
+           "consumer electronics between Hong Kong and Shenzhen: industrial design, "
            "electronics, packaging, factories. I also photograph what I ship.",
     "stats": [
         ("200,000+", "devices shipped"),
         ("10+ years", "building consumer hardware"),
         ("Red Dot", "Design Award 2026"),
     ],
-    "hero_image": img("Ryder/IMG_2412.JPG", "At our assembly partner in Shenzhen, Ryder One mass production."),
+    "hero_image": img("Ryder/22_screenshot_2026-07-03_at_10.32.26_pm.png", "On the line at our assembly partner in Shenzhen, during Ryder One mass production.",
+                      crop=(840, 0, 2460, 2026)),
     "links": [
         ("LinkedIn", "https://www.linkedin.com/in/julneree/"),
         ("Instagram", "https://www.instagram.com/julien_neree/"),
@@ -165,11 +167,10 @@ COMPANIES = [
                 img("Ryder/23_screenshot_2026-07-03_at_10.26.26_pm.png", "Anodizing line for the aluminium frames."),
             ],
             "production": [
-                img("Ryder/22_screenshot_2026-07-03_at_10.32.26_pm.png", "On the line myself during ramp-up."),
                 img("Ryder/IMG_0628.JPG", "Final assembly and packing line."),
                 img("Ryder/IMG_0644.JPG", "Packing and final QC."),
                 img("Ryder/24_screenshot_2026-07-03_at_9.33.05_pm.png", "Finished units."),
-                img("Ryder/IMG_1122.JPG", "First mass-production cartons."),
+                img("Ryder/IMG_2412.JPG", "First mass-production cartons, straight off the line."),
             ],
             "team": [
                 img("Ryder/25_7938b8e0-49b9-42aa-9174-fb84a12ccaff.png", "Visiting our assembly partner in Shenzhen."),

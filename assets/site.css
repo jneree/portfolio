@@ -68,18 +68,15 @@ figure { margin: 0; }
 .intro {
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
   gap: clamp(32px, 6vw, 96px); align-items: end;
-  padding-top: clamp(48px, 9vw, 128px); padding-bottom: clamp(48px, 7vw, 96px);
+  padding-top: clamp(48px, 7vw, 104px); padding-bottom: clamp(48px, 7vw, 96px);
 }
-.intro h1 {
-  font-size: clamp(38px, 5.6vw, 76px); line-height: 1.02; letter-spacing: -.04em;
-  max-width: 13em;
-}
+.intro h1 { max-width: 13em; font-size: clamp(38px, 5.4vw, 74px); line-height: 1.03; letter-spacing: -.04em; }
 .lede { margin-top: 28px; font-size: clamp(17px, 1.45vw, 20px); line-height: 1.5; color: var(--muted); max-width: 36em; }
 .stats { display: flex; flex-wrap: wrap; gap: 12px 48px; margin: 40px 0 0; }
 .stats dt { font-size: 22px; font-weight: 500; letter-spacing: -.02em; }
 .stats dd { margin: 2px 0 0; font-size: 14px; color: var(--muted); }
 .links { margin-top: 32px; display: flex; gap: 20px; flex-wrap: wrap; font-size: 14px; }
-.intro-img img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--soft); }
+.intro-img img { width: 100%; background: var(--soft); }
 .intro-img figcaption, .tile figcaption, .loops figcaption, .yt figcaption, .a-fig figcaption {
   margin-top: 10px; font-size: 13px; line-height: 1.45; color: var(--muted);
 }
@@ -280,11 +277,11 @@ body[data-filter] .work { margin-top: 28px; }
 }
 @media (max-width: 900px) {
   :root { --top-h: 92px; }
+  .intro { grid-template-columns: 1fr; }
+  .intro-img { max-width: 420px; }
   .top-inner { height: auto; flex-direction: column; align-items: stretch; gap: 8px; padding-block: 12px 10px; }
   .nav { overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); }
   .nav::-webkit-scrollbar { display: none; }
-  .intro { grid-template-columns: 1fr; }
-  .intro-img { max-width: 420px; }
   .now-grid { grid-template-columns: 1fr; }
   .row { grid-template-columns: 1fr; gap: 12px; }
   .yt-grid { grid-template-columns: 1fr 1fr; }

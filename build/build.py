@@ -86,14 +86,16 @@ def save_widths(im, slug):
     return widths
 
 
-def process_image(src):
-    slug = slugify(src)
+def process_image(src, crop=None):
+    slug = slugify(src) + ("-crop" if crop else "")
     m = manifest.get(slug)
     if m and not FORCE and all((IMG / f"{slug}-{W}.webp").exists() for W in m["widths"]):
         return m
     path = resolve(src)
     im = Image.open(path)
     im = ImageOps.exif_transpose(im)
+    if crop:
+        im = im.crop(crop)
     if im.mode in ("RGBA", "LA", "P"):
         im = im.convert("RGBA")
         bg = Image.new("RGB", im.size, "white")
@@ -168,7 +170,7 @@ def media(item):
     if item["type"] == "vid" or src.lower().endswith(".gif"):
         m = process_video(src, item.get("start", 0), item.get("dur"))
     else:
-        m = process_image(src)
+        m = process_image(src, item.get("crop"))
     used.add(m["slug"])
     return m
 
@@ -443,7 +445,7 @@ def build_index():
     <dl class="stats">{stats}</dl>
     <p class="links">{links}</p>
   </div>
-  <figure class="intro-img">{img_tag(hm, "", "(max-width: 900px) 100vw, 480px", s["hero_image"]["alt"], eager=True)}<figcaption>{esc(s["hero_image"]["cap"])}</figcaption></figure>
+  <figure class="intro-img">{img_tag(hm, "", "(max-width: 900px) 100vw, 420px", s["hero_image"]["alt"], eager=True)}<figcaption>{esc(s["hero_image"]["cap"])}</figcaption></figure>
 </section>'''
     body = (intro + index_section() + now_section() + "".join(company(c) for c in C.COMPANIES)
             + videos_section() + writing_section() + photos_section() + about_section())
