@@ -23,12 +23,12 @@ SITE = {
     "url": "https://julneree.com/",
     "name": "Julien Nérée",
     "statement": "I take hardware from the first sketch to mass production.",
-    "sub": "Product engineer and designer. Ten years building consumer electronics between "
-           "Hong Kong, Shenzhen and Singapore: industrial design, electronics, packaging, "
-           "factories. I also photograph what I ship.",
+    "sub": "Product engineer and designer from France, based in Singapore. Ten years building "
+           "consumer electronics between Hong Kong, Shenzhen and Singapore: industrial design, "
+           "electronics, packaging, factories. I also photograph what I ship.",
     "stats": [
         ("200,000+", "devices shipped"),
-        ("10 years", "in Shenzhen supply chains"),
+        ("10+ years", "building consumer hardware"),
         ("Red Dot", "Design Award 2026"),
     ],
     "hero_image": img("Ryder/IMG_2412.JPG", "At our assembly partner in Shenzhen, Ryder One mass production."),

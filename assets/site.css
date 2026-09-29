@@ -71,7 +71,6 @@ figure { margin: 0; }
   padding-top: clamp(48px, 9vw, 128px); padding-bottom: clamp(48px, 7vw, 96px);
 }
 .intro h1 {
-  margin-top: 20px;
   font-size: clamp(38px, 5.6vw, 76px); line-height: 1.02; letter-spacing: -.04em;
   max-width: 13em;
 }
@@ -132,12 +131,11 @@ body[data-filter] .work { margin-top: 28px; }
 
 /* ---------- company */
 .co { padding-block: clamp(72px, 10vw, 140px) 40px; border-top: 1px solid var(--line); }
-.co-head { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 8px 32px; }
-.co-meta { grid-column: 1 / -1; display: flex; gap: 18px; }
+.co-head { display: grid; gap: 10px; }
 .co-name { font-size: clamp(52px, 9vw, 128px); line-height: .92; letter-spacing: -.05em; }
-.co-role { font-size: 15px; text-align: right; max-width: 30em; }
+.co-role { margin-top: 10px; font-size: 16px; max-width: 34em; }
 .co-role span { display: block; color: var(--muted); }
-.now .co-role { text-align: left; margin-top: 12px; }
+.now .co-role { margin-top: 12px; }
 .co-hero { margin-top: clamp(32px, 4vw, 56px); }
 .co-hero img { width: 100%; max-height: 82vh; object-fit: cover; background: var(--soft); }
 .co-body { margin-top: clamp(32px, 4vw, 56px); }
@@ -157,7 +155,6 @@ body[data-filter] .work { margin-top: 28px; }
 .now .row { grid-template-columns: minmax(0, 1fr); }
 .row-head { padding-top: 2px; }
 .row-head h4 { font-size: 15px; line-height: 1.35; }
-.row-head .count { display: block; margin-top: 6px; }
 .strip-wrap { position: relative; min-width: 0; }
 .strip {
   display: flex; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain;
@@ -293,8 +290,6 @@ body[data-filter] .work { margin-top: 28px; }
 }
 @media (max-width: 640px) {
   :root { --gutter: 16px; --tile-h: 230px; }
-  .co-head { grid-template-columns: 1fr; }
-  .co-role { text-align: left; }
   .facts { grid-template-columns: 1fr; }
   .loops { grid-template-columns: 1fr; }
   .yt-grid { grid-template-columns: 1fr; }

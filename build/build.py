@@ -251,14 +251,14 @@ def company(co):
                 label = co.get("row_labels", {}).get(rk) or CAT[k]
                 rows.append(
                     f'<div class="row" data-cat="{rk}">'
-                    f'<div class="row-head"><h4>{esc(label)}</h4><span class="count label">{len(items):02d}</span></div>'
+                    f'<div class="row-head"><h4>{esc(label)}</h4></div>'
                     f'{strip(items)}</div>')
         if rows:
             phases.append(f'<div class="phase"><h3 class="phase-label label">{phase}</h3>{"".join(rows)}</div>')
     return f'''
 <section class="co" id="{co["id"]}" data-section>
   <header class="co-head wrap">
-    <p class="label co-meta"><span>{co["num"]}</span><span>{esc(co["years"])}</span></p>
+    <p class="label co-meta">{esc(co["years"])}</p>
     <h2 class="co-name">{esc(co["name"])}</h2>
     <p class="co-role">{esc(co["role"])}<span>{esc(co["place"])}</span></p>
   </header>
@@ -436,7 +436,6 @@ def build_index():
     intro = f'''
 <section class="intro wrap">
   <div class="intro-text">
-    <p class="label">{esc(s["name"])} · Singapore</p>
     <h1>{esc(s["statement"])}</h1>
     <p class="lede">{esc(s["sub"])}</p>
     <dl class="stats">{stats}</dl>
