@@ -72,7 +72,7 @@ NOW = {
     "url": "https://getlarkin.com",
     "intro": "Larkin is an AI wristband with no screen and nothing to press. It listens through "
              "your day and gives it back as something you can read, learn from and build on. "
-             "I'm building all of it: the band, the app and the AI behind it.",
+             "I'm building all of it: the band, the app, the AI behind it, the branding and the website.",
     "items": [
         img("larkin/band-ring-1200.webp", "The light ring. Green means it's listening."),
         img("larkin/band-desk-1200.webp", "Larkin band."),
