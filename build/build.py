@@ -258,22 +258,28 @@ def company(co):
                     f'<div class="row-head"><h4>{esc(label)}</h4></div>'
                     f'{strip(items)}</div>')
         if rows:
-            phases.append(f'<div class="phase"><h3 class="phase-label label">{phase}</h3>{"".join(rows)}</div>')
+            phases.append(f'<div class="phase"><h3 class="phase-label">{phase}</h3>{"".join(rows)}</div>')
     return f'''
 <section class="co" id="{co["id"]}" data-section>
   <header class="co-head wrap">
     <p class="label co-meta">{esc(co["years"])}</p>
     <h2 class="co-name">{esc(co["name"])}</h2>
     <p class="co-role">{esc(co["role"])}<span>{esc(co["place"])}</span></p>
+    {site_link(co["url"])}
   </header>
   <figure class="co-hero wrap"><button class="zoom" type="button" {lb_attrs(hero, "", co["hero"]["cap"])} aria-label="Enlarge: {esc(co["hero"]["cap"])}">{img_tag(hero, "", "(max-width: 1320px) 100vw, 1280px", co["hero"]["alt"])}</button></figure>
   <div class="co-body wrap">
-    <p class="co-intro">{esc(co["intro"])} <a class="ext" href="{co["url"]}" rel="noopener" target="_blank">{co["url"].split("//")[1].strip("/").replace("www.", "")} ↗</a></p>
+    <p class="co-intro">{esc(co["intro"])}</p>
     <div class="facts">{facts}</div>
   </div>
   {f'<div class="wrap">{loops}</div>' if loops else ""}
   <div class="work">{"".join(phases)}</div>
 </section>'''
+
+
+def site_link(url):
+    domain = url.split("//")[1].strip("/").replace("www.", "")
+    return f'<a class="site-link" href="{url}" rel="noopener" target="_blank">{domain}<span aria-hidden="true">↗</span></a>'
 
 
 def now_section():
@@ -285,8 +291,9 @@ def now_section():
       <p class="label"><span class="dot"></span>Now · {esc(n["years"])}</p>
       <h2 class="now-name">{esc(n["name"])}</h2>
       <p class="co-role">{esc(n["role"])}<span>{esc(n["place"])}</span></p>
+      {site_link(n["url"])}
     </div>
-    <p class="now-intro">{esc(n["intro"])} <a class="ext" href="{n["url"]}" rel="noopener" target="_blank">getlarkin.com ↗</a></p>
+    <p class="now-intro">{esc(n["intro"])}</p>
   </div>
   <div class="work"><div class="row">{strip(n["items"])}</div></div>
 </section>'''
