@@ -443,14 +443,12 @@ def build_index():
     s = C.SITE
     hm = media(s["hero_image"])
     stats = "".join(f'<div><dt>{esc(a)}</dt><dd>{esc(b)}</dd></div>' for a, b in s["stats"])
-    links = " ".join(f'<a href="{u}" rel="noopener" target="_blank">{n} ↗</a>' for n, u in s["links"])
     intro = f'''
 <section class="intro wrap">
   <div class="intro-text">
     <h1>{esc(s["statement"])}</h1>
     <p class="lede">{esc(s["sub"])}</p>
     <dl class="stats">{stats}</dl>
-    <p class="links">{links}</p>
   </div>
   <figure class="intro-img">{img_tag(hm, "", "(max-width: 900px) 100vw, 420px", s["hero_image"]["alt"], eager=True)}<figcaption>{esc(s["hero_image"]["cap"])}</figcaption></figure>
 </section>'''
