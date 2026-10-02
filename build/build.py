@@ -419,7 +419,8 @@ def page(title, description, body, p="", og_image="img/og.jpg", canonical=""):
 <header class="top">
   <div class="wrap top-inner">
     <a class="brand" href="{p or "#"}">Julien Nérée</a>
-    <nav class="nav" aria-label="Sections">{nav}</nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><i></i><i></i></button>
+    <nav class="nav" id="site-nav" aria-label="Sections">{nav}</nav>
   </div>
 </header>
 <main>{body}</main>

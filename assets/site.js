@@ -9,6 +9,18 @@
   addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  // Mobile menu
+  const menuBtn = $(".menu-btn");
+  const setMenu = (open) => {
+    top.classList.toggle("open", open);
+    menuBtn.setAttribute("aria-expanded", String(open));
+  };
+  menuBtn?.addEventListener("click", () => setMenu(!top.classList.contains("open")));
+  $$(".nav a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+  document.addEventListener("click", (e) => { if (!top.contains(e.target)) setMenu(false); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
+  matchMedia("(min-width: 901px)").addEventListener("change", (e) => { if (e.matches) setMenu(false); });
+
   // Highlight the current section in the nav
   const links = new Map($$(".nav a").map((a) => [a.hash.slice(1), a]));
   const spy = new IntersectionObserver((entries) => {

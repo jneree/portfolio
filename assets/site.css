@@ -63,6 +63,7 @@ figure { margin: 0; }
 .nav { display: flex; gap: 22px; font-size: 14px; }
 .nav a { text-decoration: none; color: var(--muted); white-space: nowrap; transition: color .15s; }
 .nav a:hover, .nav a.on { color: var(--fg); }
+.menu-btn { display: none; }
 
 /* ---------- intro */
 .intro {
@@ -285,14 +286,32 @@ body[data-filter] .work { margin-top: 28px; }
   .before { grid-column: 1 / -1; }
 }
 @media (max-width: 900px) {
-  :root { --top-h: 92px; }
   .intro { grid-template-columns: 1fr; }
   .intro-img { max-width: 420px; }
-  .top-inner { height: auto; flex-direction: column; align-items: stretch; gap: 8px; padding-block: 12px 10px; }
-  .nav { overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); }
-  .nav::-webkit-scrollbar { display: none; }
+  /* Hamburger menu */
+  .menu-btn {
+    position: relative; display: inline-flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px; margin-right: -10px; padding: 0; border: 0; background: none; cursor: pointer;
+  }
+  .menu-btn i { position: absolute; width: 20px; height: 1.5px; background: var(--fg); transition: transform .2s; }
+  .menu-btn i:first-child { transform: translateY(-4px); }
+  .menu-btn i:last-child { transform: translateY(4px); }
+  .top.open { background: var(--bg); border-bottom-color: var(--line); }
+  .top.open .menu-btn i:first-child { transform: rotate(45deg); }
+  .top.open .menu-btn i:last-child { transform: rotate(-45deg); }
+  .nav {
+    display: none; position: absolute; top: var(--top-h); left: 0; right: 0;
+    flex-direction: column; gap: 0; padding: 4px var(--gutter) 16px;
+    background: var(--bg); border-bottom: 1px solid var(--line);
+  }
+  .top.open .nav { display: flex; }
+  .nav a { padding: 14px 0; font-size: 20px; letter-spacing: -.01em; color: var(--fg); border-bottom: 1px solid var(--line); }
+  .nav a:last-child { border-bottom: 0; }
   .now-grid { grid-template-columns: 1fr; }
-  .row { grid-template-columns: 1fr; gap: 12px; }
+  /* Galleries run edge to edge on both sides */
+  .row { grid-template-columns: 1fr; gap: 12px; padding-left: 0; }
+  .row-head { padding-inline: var(--gutter); }
+  .strip { padding-left: var(--gutter); scroll-padding-inline: var(--gutter); }
   .yt-grid { grid-template-columns: 1fr 1fr; }
   .nudge { display: none; }
 }
