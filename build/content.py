@@ -63,6 +63,7 @@ PHASES = [
 ]
 
 NOW = {
+    "chapter": "What I'm building now",
     "id": "larkin",
     "name": "Larkin",
     "years": "Since August 2026",
@@ -81,6 +82,12 @@ NOW = {
         img("larkin/app-chronicles-720.webp", "Chronicles: every day becomes a chapter."),
         img("larkin/app-day-720.webp", "Day view: who you talked to, what came up."),
     ],
+}
+
+BEFORE = {
+    "chapter": "What I built before",
+    "sub": "Three companies across ten years, from Hong Kong and Shenzhen to Singapore. "
+           "For each one: my role, the hard parts, and the work in pictures.",
 }
 
 COMPANIES = [

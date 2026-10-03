@@ -282,14 +282,24 @@ def site_link(url):
     return f'<a class="site-link" href="{url}" rel="noopener" target="_blank">{domain}<span aria-hidden="true">↗</span></a>'
 
 
+def before_section():
+    b = C.BEFORE
+    return f'''
+<section class="chapter wrap">
+  <h2 class="chapter-title">{esc(b["chapter"])}</h2>
+  <p class="chapter-sub">{esc(b["sub"])}</p>
+</section>'''
+
+
 def now_section():
     n = C.NOW
     return f'''
 <section class="now" id="{n["id"]}" data-section>
+  <h2 class="chapter-title wrap">{esc(n["chapter"])}</h2>
   <div class="wrap now-grid">
     <div>
       <p class="label"><span class="dot"></span>Now · {esc(n["years"])}</p>
-      <h2 class="now-name">{esc(n["name"])}</h2>
+      <h3 class="now-name">{esc(n["name"])}</h3>
       <p class="co-role">{esc(n["role"])}<span>{esc(n["place"])}</span></p>
       {site_link(n["url"])}
     </div>
@@ -430,7 +440,7 @@ def build_index():
   </div>
   <figure class="intro-img">{img_tag(hm, "", "(max-width: 900px) 100vw, 420px", s["hero_image"]["alt"], eager=True)}<figcaption>{esc(s["hero_image"]["cap"])}</figcaption></figure>
 </section>'''
-    body = (intro + now_section() + "".join(company(c) for c in C.COMPANIES)
+    body = (intro + now_section() + before_section() + "".join(company(c) for c in C.COMPANIES)
             + videos_section() + writing_section() + photos_section() + about_section())
     (ROOT / "index.html").write_text(page(s["title"], s["description"], body))
 

@@ -83,7 +83,13 @@ figure { margin: 0; }
 }
 
 /* ---------- now (Larkin) */
-.now { padding-block: 64px 80px; border-top: 1px solid var(--line); }
+/* Chapter titles: "What I'm building now" / "What I built before" */
+.chapter-title { font-size: clamp(36px, 5vw, 64px); line-height: 1; letter-spacing: -.04em; }
+.now .chapter-title { margin-bottom: clamp(56px, 7vw, 96px); }
+.chapter { padding-block: clamp(120px, 16vw, 220px) 0; border-top: 1px solid var(--line); }
+.chapter-sub { margin-top: 24px; max-width: 34em; font-size: clamp(17px, 1.45vw, 20px); line-height: 1.5; color: var(--muted); }
+.chapter + .co { border-top: 0; padding-top: clamp(80px, 10vw, 140px); }
+.now { padding-block: clamp(96px, 12vw, 160px) 80px; border-top: 1px solid var(--line); }
 .now-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 32px 64px; align-items: end; margin-bottom: 40px; }
 .now-name { margin-top: 14px; font-size: clamp(40px, 5.5vw, 72px); line-height: 1; letter-spacing: -.045em; }
 .now-intro { font-size: clamp(17px, 1.45vw, 20px); line-height: 1.5; max-width: 36em; }
