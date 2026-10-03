@@ -25,7 +25,7 @@ SITE = {
     "url": "https://julneree.com/",
     "name": "Julien Nérée",
     "statement": "I take hardware from the first sketch to mass production.",
-    "sub": "French product engineer and designer, based in Singapore. Ten years building "
+    "sub": "From France, based in Singapore. Ten years building "
            "consumer electronics between Hong Kong and Shenzhen: industrial design, "
            "electronics, packaging, factories. I also photograph what I ship.",
     "stats": [
@@ -42,7 +42,7 @@ SITE = {
     ],
 }
 
-# Filter keys, in the order they appear in the "What I do" index.
+# Gallery row categories and their labels.
 CATEGORIES = [
     ("design", "Industrial & Mechanical Design"),
     ("electronics", "Electronics"),
@@ -54,7 +54,6 @@ CATEGORIES = [
     ("production", "Mass Production"),
     ("team", "Manufacturing & Design Team"),
     ("unboxing", "Product Unboxing"),
-    ("photo", "Product Shots"),
 ]
 
 PHASES = [

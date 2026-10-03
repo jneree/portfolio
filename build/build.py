@@ -299,29 +299,6 @@ def now_section():
 </section>'''
 
 
-def counts():
-    c = {k: 0 for k, _ in C.CATEGORIES}
-    for co in C.COMPANIES:
-        for rk, items in co["rows"].items():
-            for k in rk.split():
-                c[k] += len(items)
-    c["photo"] = len(C.PHOTOS)
-    return c
-
-
-def index_section():
-    c = counts()
-    chips = "".join(
-        f'<button class="chip" type="button" data-filter="{k}"><span>{esc(label)}</span><span class="n">{c[k]}</span></button>'
-        for k, label in C.CATEGORIES)
-    return f'''
-<section class="index wrap" aria-label="What I do">
-  <div class="index-head"><h2 class="label">What I do</h2><p class="muted small">Pick one to see that work across every company.</p></div>
-  <div class="chips">{chips}</div>
-</section>
-<div class="filterbar" hidden><div class="wrap"><span class="label">Showing</span> <strong class="fb-name"></strong><button class="fb-clear" type="button">Show everything ×</button></div></div>'''
-
-
 def videos_section():
     cards = ""
     for vid_id, title in C.VIDEOS:
@@ -358,7 +335,7 @@ def photos_section():
     return f'''
 <section class="photos" id="photography" data-section>
   <div class="wrap">
-    <div class="sec-head"><h2 class="sec-title">Product photography</h2><p>I shoot the products I make. Studio, close-ups and live shots, all by me.</p></div>
+    <div class="sec-head"><h2 class="sec-title">Product photography (not AI)</h2><p>I shoot the products I make. Studio, close-ups and live shots, all by me.</p></div>
     <div class="masonry" data-gallery>{figs}</div>
   </div>
 </section>'''
@@ -453,7 +430,7 @@ def build_index():
   </div>
   <figure class="intro-img">{img_tag(hm, "", "(max-width: 900px) 100vw, 420px", s["hero_image"]["alt"], eager=True)}<figcaption>{esc(s["hero_image"]["cap"])}</figcaption></figure>
 </section>'''
-    body = (intro + index_section() + now_section() + "".join(company(c) for c in C.COMPANIES)
+    body = (intro + now_section() + "".join(company(c) for c in C.COMPANIES)
             + videos_section() + writing_section() + photos_section() + about_section())
     (ROOT / "index.html").write_text(page(s["title"], s["description"], body))
 

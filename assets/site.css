@@ -82,44 +82,6 @@ figure { margin: 0; }
   margin-top: 10px; font-size: 13px; line-height: 1.45; color: var(--muted);
 }
 
-/* ---------- skills index */
-.index { padding-block: 40px 56px; border-top: 1px solid var(--line); }
-.index-head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.chip {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 9px 14px; border: 1px solid var(--line); border-radius: 999px;
-  background: var(--bg); font-size: 14px; cursor: pointer;
-  transition: border-color .15s, background .15s, color .15s;
-}
-.chip .n { font: 500 11px/1 var(--mono); color: var(--faint); }
-.chip:hover { border-color: var(--fg); }
-.chip[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
-.chip[aria-pressed="true"] .n { color: var(--faint); }
-
-.filterbar {
-  position: sticky; top: var(--top-h); z-index: 15;
-  background: var(--fg); color: var(--bg); font-size: 14px;
-}
-.filterbar .wrap { display: flex; align-items: center; gap: 10px; min-height: 44px; }
-.filterbar .label { color: var(--faint); }
-.filterbar strong { font-weight: 500; }
-.fb-clear { margin-left: auto; background: none; border: 0; color: var(--bg); cursor: pointer; opacity: .8; }
-.fb-clear:hover { opacity: 1; }
-
-/* Filtered view: company name + matching work only */
-html:has(body[data-filter]) { scroll-padding-top: calc(var(--top-h) + 60px); }
-body[data-filter] .row[data-cat]:not(.match),
-body[data-filter] .phase:not(.match),
-body[data-filter] .co:not(.match),
-body[data-filter] .now,
-body[data-filter] .co-hero,
-body[data-filter] .co-body,
-body[data-filter] .loops { display: none; }
-body[data-filter] .co { padding-block: 48px 0; }
-body[data-filter] .co-name { font-size: clamp(36px, 5vw, 64px); }
-body[data-filter] .work { margin-top: 28px; }
-
 /* ---------- now (Larkin) */
 .now { padding-block: 64px 80px; border-top: 1px solid var(--line); }
 .now-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 32px 64px; align-items: end; margin-bottom: 40px; }
@@ -155,7 +117,7 @@ body[data-filter] .work { margin-top: 28px; }
 .work { margin-top: clamp(48px, 6vw, 80px); }
 .phase { margin-bottom: 40px; }
 .phase-label {
-  margin-inline: var(--gutter); padding-block: 18px 32px; border-top: 1px solid var(--fg);
+  margin-inline: var(--gutter); padding-block: 18px 32px;
   font-size: clamp(24px, 2.4vw, 32px); line-height: 1.1; letter-spacing: -.025em;
 }
 .row { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: 24px; padding-left: var(--gutter); margin-bottom: 40px; }

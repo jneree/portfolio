@@ -62,47 +62,6 @@
     update();
   });
 
-  // "What I do" filter
-  const chips = $$(".chip");
-  const bar = $(".filterbar");
-  const setFilter = (key) => {
-    const body = document.body;
-    const chip = chips.find((c) => c.dataset.filter === key);
-    chips.forEach((c) => c.setAttribute("aria-pressed", String(c === chip && !!key)));
-    $$(".match").forEach((el) => el.classList.remove("match"));
-    if (!key) {
-      delete body.dataset.filter;
-      bar.hidden = true;
-      return;
-    }
-    body.dataset.filter = key;
-    $$(`.row[data-cat~="${key}"]`).forEach((r) => {
-      r.classList.add("match");
-      r.closest(".phase")?.classList.add("match");
-      r.closest(".co")?.classList.add("match");
-    });
-    $(".fb-name", bar).textContent = $("span", chip).textContent;
-    bar.hidden = false;
-    const first = $(".co.match");
-    if (first) requestAnimationFrame(() => first.scrollIntoView({ behavior: "auto", block: "start" }));
-  };
-  chips.forEach((c) => {
-    c.setAttribute("aria-pressed", "false");
-    c.addEventListener("click", () => {
-      const key = c.dataset.filter;
-      if (key === "photo") {
-        setFilter(null);
-        $("#photography").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
-        return;
-      }
-      setFilter(c.getAttribute("aria-pressed") === "true" ? null : key);
-    });
-  });
-  $(".fb-clear")?.addEventListener("click", () => {
-    setFilter(null);
-    $(".index").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
-  });
-
   // YouTube: load the player only on click
   $$(".yt-play").forEach((b) => {
     b.addEventListener("click", () => {
