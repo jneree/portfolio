@@ -345,7 +345,7 @@ def photos_section():
     return f'''
 <section class="photos" id="photography" data-section>
   <div class="wrap">
-    <div class="sec-head"><h2 class="sec-title">Product photography (not AI)</h2><p>I shoot the products I make. Studio, close-ups and live shots, all by me.</p></div>
+    <div class="sec-head"><h2 class="sec-title">Product photography (not AI)</h2><p>I shoot the products I make. Studio, close-ups and live shots.</p></div>
     <div class="masonry" data-gallery>{figs}</div>
   </div>
 </section>'''
