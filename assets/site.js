@@ -62,6 +62,38 @@
     update();
   });
 
+  // Company cards: open one at a time
+  const cards = $$("[data-card]");
+  const setCard = (card, open) => {
+    card.toggleAttribute("data-open", open);
+    $(".card-body", card).hidden = !open;
+    $(".card-face", card).setAttribute("aria-expanded", String(open));
+    $(".cta", card).textContent = open ? "Close" : "Open project";
+  };
+  cards.forEach((card) => {
+    $(".card-face", card).addEventListener("click", () => {
+      const open = !card.hasAttribute("data-open");
+      cards.forEach((c) => { if (c !== card) setCard(c, false); });
+      setCard(card, open);
+      if (open || card.getBoundingClientRect().top < 0) {
+        card.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+      }
+    });
+  });
+
+  // Stages inside a card: one open at a time
+  $$("[data-stage]").forEach((stage) => {
+    $(".stage-head", stage).addEventListener("click", () => {
+      const open = !stage.hasAttribute("data-open");
+      $$("[data-stage]", stage.parentElement).forEach((el) => {
+        const on = el === stage && open;
+        el.toggleAttribute("data-open", on);
+        $(".stage-body", el).hidden = !on;
+        $(".stage-head", el).setAttribute("aria-expanded", String(on));
+      });
+    });
+  });
+
   // YouTube: load the player only on click
   $$(".yt-play").forEach((b) => {
     b.addEventListener("click", () => {

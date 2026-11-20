@@ -38,6 +38,7 @@ ROOTS = {
     "c2m": DL / "julneree-concept-to-manufacturing" / "videos",
     "larkin": BUILD / "sources" / "larkin",
     "writing": BUILD / "sources" / "writing",
+    "me": BUILD / "sources" / "me",
     "dl": DL,
 }
 IMG = ROOT / "img"
@@ -211,11 +212,16 @@ def lb_attrs(m, p, cap):
             f'data-w="{m["w"]}" data-h="{m["h"]}" data-cap="{esc(cap)}"')
 
 
+CHEV = ('<svg class="chev" aria-hidden="true" width="{0}" height="{0}" viewBox="0 0 14 14" fill="none">'
+        '<path d="M3 5.25L7 9.25L11 5.25" stroke="currentColor" stroke-width="{1}" stroke-linecap="round" '
+        'stroke-linejoin="round"></path></svg>')
+
+
 def tile(item, p=""):
     m = media(item)
     ar = m["w"] / m["h"]
-    inner = video_tag(m, p) if m["kind"] == "vid" else img_tag(m, p, f"{min(round(300 * ar), 1400)}px", item["alt"])
-    badge = '<span class="badge mono">Video</span>' if m["kind"] == "vid" else ""
+    inner = video_tag(m, p) if m["kind"] == "vid" else img_tag(m, p, f"{min(round(320 * ar), 1400)}px", item["alt"])
+    badge = '<span class="badge">Video</span>' if m["kind"] == "vid" else ""
     cls = "tile wide" if item.get("wide") else "tile"
     return (f'<figure class="{cls}" style="--ar:{ar:.4f}">'
             f'<button class="zoom" type="button" {lb_attrs(m, p, item["cap"])} aria-label="Enlarge: {esc(item["cap"])}">'
@@ -223,90 +229,147 @@ def tile(item, p=""):
             f'<figcaption>{esc(item["cap"])}</figcaption></figure>')
 
 
-def strip(items, p=""):
-    return (f'<div class="strip-wrap"><div class="strip" data-gallery>{"".join(tile(i, p) for i in items)}</div>'
-            '<button class="nudge prev" type="button" aria-label="Scroll left">←</button>'
-            '<button class="nudge next" type="button" aria-label="Scroll right">→</button></div>')
+def strip(items):
+    return f'<div class="strip" data-gallery>{"".join(tile(i) for i in items)}</div>'
+
+
+def site_link(url):
+    domain = url.split("//")[1].strip("/").replace("www.", "")
+    return f'<a class="pill" href="{url}" rel="noopener" target="_blank">{domain} <span aria-hidden="true">↗</span></a>'
 
 
 CAT = dict(C.CATEGORIES)
 
 
-def company(co):
-    hero = media(co["hero"])
-    facts = "".join(
-        f'<div class="fact"><h3 class="label">{esc(t)}</h3><ul>{"".join(f"<li>{esc(x)}</li>" for x in xs)}</ul></div>'
-        for t, xs in co["facts"])
-    loops = ""
-    if co.get("loops"):
-        loops = '<div class="loops" data-gallery>' + "".join(
-            f'<figure><button class="zoom" type="button" {lb_attrs(media(v), "", v["cap"])} '
-            f'aria-label="Enlarge: {esc(v["cap"])}">{video_tag(media(v), "")}</button>'
-            f'<figcaption>{esc(v["cap"])}</figcaption></figure>'
-            for v in co["loops"]) + "</div>"
-    phases = []
+def stages(co):
+    """Development / Manufacturing / Launch, each a list of (label, items)."""
+    out = []
     for phase, keys in C.PHASES:
         rows = []
         # A row key can hold several categories ("production team"); it sits in the phase of the first one.
         for k in keys:
             for rk, items in co["rows"].items():
-                if rk.split()[0] != k or not items:
-                    continue
-                label = co.get("row_labels", {}).get(rk) or CAT[k]
-                rows.append(
-                    f'<div class="row" data-cat="{rk}">'
-                    f'<div class="row-head"><h4>{esc(label)}</h4></div>'
-                    f'{strip(items)}</div>')
+                if rk.split()[0] == k and items:
+                    rows.append((co.get("row_labels", {}).get(rk) or CAT[k], items))
         if rows:
-            phases.append(f'<div class="phase"><h3 class="phase-label">{phase}</h3>{"".join(rows)}</div>')
-    return f'''
-<section class="co" id="{co["id"]}" data-section>
-  <header class="co-head wrap">
-    <p class="label co-meta">{esc(co["years"])}</p>
-    <h2 class="co-name">{esc(co["name"])}</h2>
-    <p class="co-role">{esc(co["role"])}<span>{esc(co["place"])}</span></p>
-    {site_link(co["url"])}
-  </header>
-  <figure class="co-hero wrap"><button class="zoom" type="button" {lb_attrs(hero, "", co["hero"]["cap"])} aria-label="Enlarge: {esc(co["hero"]["cap"])}">{img_tag(hero, "", "(max-width: 1320px) 100vw, 1280px", co["hero"]["alt"])}</button></figure>
-  <div class="co-body wrap">
-    <p class="co-intro">{esc(co["intro"])}</p>
-    <div class="facts">{facts}</div>
+            out.append((phase, rows))
+    return out
+
+
+def count_line(co):
+    items = [i for _, rows in stages(co) for _, its in rows for i in its]
+    v = sum(1 for i in items if i["type"] == "vid")
+    n = len(items) - v
+    line = f'{n} photo{"" if n == 1 else "s"}'
+    if v:
+        line += f' and {v} video{"" if v == 1 else "s"}'
+    return line + " inside"
+
+
+def card(co):
+    hero = media(co["hero"])
+    c1, c2 = C.CARD_TONES[co["id"]]
+    cid = co["id"]
+    facts = "".join(
+        f'<div class="split fact"><h3>{esc(t)}</h3><ul>{"".join(f"<li>{esc(x)}</li>" for x in xs)}</ul></div>'
+        for t, xs in co["facts"])
+    loops = ""
+    if co.get("loops"):
+        loops = '<div class="loops" data-gallery>' + "".join(
+            f'<figure><button class="zoom" type="button" {lb_attrs(media(v), "", v["cap"])} '
+            f'aria-label="Enlarge: {esc(v["cap"])}">{video_tag(media(v), "")}<span class="badge">Video</span></button>'
+            f'<figcaption>{esc(v["cap"])}</figcaption></figure>'
+            for v in co["loops"]) + "</div>"
+    st = ""
+    for i, (phase, rows) in enumerate(stages(co)):
+        first = i == 0
+        cats = "".join(f'<div class="split cat"><h4>{esc(label)}</h4>{strip(items)}</div>' for label, items in rows)
+        st += (f'<div class="stage" data-stage{" data-open" if first else ""}>'
+               f'<button class="stage-head" type="button" aria-expanded="{"true" if first else "false"}" '
+               f'aria-controls="{cid}-{i}">{phase}{CHEV.format(20, 1.25)}</button>'
+               f'<div class="stage-body" id="{cid}-{i}"{"" if first else " hidden"}>{cats}</div></div>')
+    return f"""
+    <section class="card" id="{cid}" data-card data-section style="--c1:{c1};--c2:{c2}">
+      <button class="card-face" type="button" aria-expanded="false" aria-controls="{cid}-body">
+        <span class="card-id">
+          <span><span class="small">{esc(co["years"])}</span><span class="card-name">{esc(co["name"])}</span><span class="card-role">{esc(co["role"])}</span></span>
+          <span><span class="card-count">{count_line(co)}</span><span class="pill solid" aria-hidden="true"><span class="cta">Open project</span>{CHEV.format(14, 1.5)}</span></span>
+        </span>
+        {img_tag(hero, "", "(max-width: 640px) 100vw, 640px", co["hero"]["alt"])}
+      </button>
+      <div class="card-body" id="{cid}-body" hidden>
+        <div class="split"><div aria-hidden="true"></div><div class="where"><p class="muted">{esc(co["place"])}</p>{site_link(co["url"])}</div></div>
+        <div class="split card-intro"><div aria-hidden="true"></div><p class="light">{esc(co["intro"])}</p></div>
+        <div class="facts">{facts}</div>
+        {loops}
+        <div class="stages">{st}</div>
+      </div>
+    </section>"""
+
+
+def hero_section():
+    s = C.SITE
+    pm = media(s["portrait"])
+    stats = "".join(f'<div><b>{esc(a)}</b><span>{esc(b)}</span></div>' for a, b in s["stats"])
+    return f"""
+<section class="hero wrap" id="top">
+  <div class="hero-row">
+    <div class="hero-text">
+      <h1>{esc(s["statement"])}</h1>
+      <p class="lede">{esc(s["sub"])}</p>
+    </div>
+    <div class="hero-img">{img_tag(pm, "", "(max-width: 640px) 100vw, 300px", s["portrait"]["alt"], eager=True)}</div>
   </div>
-  {f'<div class="wrap">{loops}</div>' if loops else ""}
-  <div class="work">{"".join(phases)}</div>
-</section>'''
-
-
-def site_link(url):
-    domain = url.split("//")[1].strip("/").replace("www.", "")
-    return f'<a class="site-link" href="{url}" rel="noopener" target="_blank">{domain}<span aria-hidden="true">↗</span></a>'
-
-
-def before_section():
-    b = C.BEFORE
-    return f'''
-<section class="chapter wrap">
-  <h2 class="chapter-title">{esc(b["chapter"])}</h2>
-  <p class="chapter-sub">{esc(b["sub"])}</p>
-</section>'''
+  <div class="stats">{stats}</div>
+</section>"""
 
 
 def now_section():
     n = C.NOW
-    return f'''
+    return f"""
 <section class="now" id="{n["id"]}" data-section>
-  <h2 class="chapter-title wrap">{esc(n["chapter"])}</h2>
-  <div class="wrap now-grid">
-    <div>
-      <p class="label"><span class="dot"></span>Now · {esc(n["years"])}</p>
-      <h3 class="now-name">{esc(n["name"])}</h3>
-      <p class="co-role">{esc(n["role"])}<span>{esc(n["place"])}</span></p>
-      {site_link(n["url"])}
+  <div class="wrap">
+    <h2 class="title">{esc(n["chapter"])}</h2>
+    <div class="now-row">
+      <div class="now-id">
+        <p class="now-tag"><i aria-hidden="true"></i>Now · {esc(n["years"])}</p>
+        <h3 class="now-name">{esc(n["name"])}</h3>
+        <p class="now-role">{esc(n["role"])}<br><span class="muted">{esc(n["place"])}</span></p>
+        {site_link(n["url"])}
+      </div>
+      <p class="light">{esc(n["intro"])}</p>
     </div>
-    <p class="now-intro">{esc(n["intro"])}</p>
   </div>
-  <div class="work"><div class="row">{strip(n["items"])}</div></div>
-</section>'''
+  <div class="now-strip">{strip(n["items"])}</div>
+</section>"""
+
+
+def before_section():
+    b = C.BEFORE
+    by_id = {c["id"]: c for c in C.COMPANIES}
+    cards = "".join(card(by_id[i]) for i in C.CARD_ORDER)
+    return f"""
+<section class="before wrap">
+  <h2 class="title">{esc(b["chapter"])}</h2>
+  <p class="lede">{esc(b["sub"])}</p>
+  <div class="cards">{cards}
+  </div>
+</section>"""
+
+
+def photos_section():
+    figs = ""
+    for it in C.PHOTOS:
+        m = media(it)
+        figs += (f'<figure><button class="zoom" type="button" {lb_attrs(m, "", it["cap"])} aria-label="Enlarge: {esc(it["cap"])}">'
+                 f'{img_tag(m, "", "(max-width: 700px) 50vw, 300px", it["alt"])}</button></figure>')
+    return f"""
+<section class="photos" id="photography" data-section>
+  <div class="wrap">
+    <div class="sec-head"><h2 class="title">Product photography (not AI)</h2><p>I shoot the products I make. Studio, close-ups and live shots.</p></div>
+    <div class="masonry" data-gallery>{figs}</div>
+  </div>
+</section>"""
 
 
 def videos_section():
@@ -315,73 +378,45 @@ def videos_section():
         m = process_youtube(vid_id)
         used.add(m["slug"])
         cards += (f'<figure class="yt"><button type="button" class="yt-play" data-yt="{vid_id}" aria-label="Play: {esc(title)}">'
-                  f'{img_tag(m, "", "(max-width: 700px) 100vw, 420px", "")}<span class="play" aria-hidden="true"></span></button>'
+                  f'{img_tag(m, "", "(max-width: 700px) 100vw, 400px", "")}<span class="play" aria-hidden="true"></span></button>'
                   f'<figcaption>{esc(title)}</figcaption></figure>')
-    return f'''
+    return f"""
 <section class="videos wrap" id="video" data-section>
-  <div class="sec-head"><h2 class="sec-title">On video</h2><p class="muted">Design, manufacturing and launch of Ryder One, on the Ryder channel.</p></div>
+  <div class="sec-head"><h2 class="title">On video</h2><p>Design, manufacturing and launch of Ryder One, on the Ryder channel.</p></div>
   <div class="yt-grid">{cards}</div>
-</section>'''
-
-
-def writing_section():
-    rows = "".join(
-        f'<a class="post" href="{a["slug"]}/"><span class="label">{a["date"].split()[-1]}</span>'
-        f'<span class="post-title">{esc(a["title"])}</span><span class="label post-kind">{esc(a["kind"])}</span></a>'
-        for a in C.ARTICLES)
-    return f'''
-<section class="writing wrap" id="writing" data-section>
-  <div class="sec-head"><h2 class="sec-title">Writing</h2></div>
-  <div class="posts">{rows}</div>
-</section>'''
-
-
-def photos_section():
-    figs = ""
-    for it in C.PHOTOS:
-        m = media(it)
-        figs += (f'<figure><button class="zoom" type="button" {lb_attrs(m, "", it["cap"])} aria-label="Enlarge: {esc(it["cap"])}">'
-                 f'{img_tag(m, "", "(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 430px", it["alt"])}</button></figure>')
-    return f'''
-<section class="photos" id="photography" data-section>
-  <div class="wrap">
-    <div class="sec-head"><h2 class="sec-title">Product photography (not AI)</h2><p>I shoot the products I make. Studio, close-ups and live shots.</p></div>
-    <div class="masonry" data-gallery>{figs}</div>
-  </div>
-</section>'''
+</section>"""
 
 
 def about_section():
     a = C.ABOUT
     pm = media(a["portrait"])
     before = "".join(
-        f'<li><span class="label">{y}</span><span><strong>{esc(o)}</strong> {esc(t)}</span></li>' for y, o, t in a["before"])
-    links = " ".join(f'<a href="{u}" rel="noopener" target="_blank">{n} ↗</a>' for n, u in C.SITE["links"])
-    return f'''
-<section class="about wrap" id="about" data-section>
-  <div class="about-grid">
-    <div class="portrait">{img_tag(pm, "", "220px", "Julien Nérée")}</div>
-    <div class="about-text">{"".join(f"<p>{esc(t)}</p>" for t in a["text"])}
+        f'<li><span>{y}</span><span>{esc(o)}<small>{esc(t)}</small></span></li>' for y, o, t in a["before"])
+    links = "".join(f'<a href="{u}" rel="noopener" target="_blank">{n} ↗</a>' for n, u in C.SITE["links"])
+    return f"""
+<section class="about wrap" id="about">
+  <div class="split">
+    <div>{img_tag(pm, "", "120px", "Julien Nérée", cls="about-photo")}</div>
+    <div class="about-text">{"".join(f'<p class="light">{esc(t)}</p>' for t in a["text"])}
       <p class="links">{links}</p></div>
-    <div class="before"><h3 class="label">Before</h3><ul>{before}</ul></div>
   </div>
-</section>'''
+  <div class="split timeline"><h3>Before</h3><ul>{before}</ul></div>
+</section>"""
 
 
-def asset_version():
+def asset_version(files=("assets/site.css", "assets/site.js")):
     h = hashlib.md5()
-    for f in ("assets/site.css", "assets/site.js"):
+    for f in files:
         h.update((ROOT / f).read_bytes())
     return h.hexdigest()[:8]
 
 
-def page(title, description, body, p="", og_image="img/og.jpg", canonical=""):
-    v = asset_version()
-    nav = "".join(f'<a href="{p}#{i}">{n}</a>' for i, n in [
-        ("larkin", "Larkin"), ("ryder", "Ryder"), ("transcelestial", "Transcelestial"),
-        ("soundbrenner", "Soundbrenner"), ("video", "Video"), ("writing", "Writing"),
-        ("photography", "Photography")])
-    return f'''<!doctype html>
+NAV = [("larkin", "Larkin"), ("ryder", "Ryder"), ("soundbrenner", "Soundbrenner"),
+       ("transcelestial", "Transcelestial"), ("photography", "Photography"), ("video", "Video")]
+
+
+def head(title, description, canonical, og_image, p, fonts, css, v):
+    return f"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -398,10 +433,27 @@ def page(title, description, body, p="", og_image="img/og.jpg", canonical=""):
 <link rel="icon" href="{p}favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{p}assets/site.css?v={v}">
+<link href="{fonts}" rel="stylesheet">
+<link rel="stylesheet" href="{p}assets/{css}?v={v}">
 <script defer src="{p}assets/site.js?v={v}"></script>
-</head>
+</head>"""
+
+
+LIGHTBOX = """<dialog class="lb" aria-label="Image viewer">
+  <div class="lb-stage"></div>
+  <p class="lb-cap"><span class="lb-n label"></span><span class="lb-t"></span></p>
+  <button class="lb-btn lb-close" type="button" aria-label="Close">×</button>
+  <button class="lb-btn lb-prev" type="button" aria-label="Previous">←</button>
+  <button class="lb-btn lb-next" type="button" aria-label="Next">→</button>
+</dialog>"""
+
+
+def page(title, description, body, p="", og_image="img/og.jpg", canonical=""):
+    """Article pages: keep their own stylesheet."""
+    v = asset_version()
+    nav = "".join(f'<a href="{p}#{i}">{n}</a>' for i, n in NAV)
+    fonts = "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap"
+    return f"""{head(title, description, canonical, og_image, p, fonts, "site.css", v)}
 <body>
 <header class="top">
   <div class="wrap top-inner">
@@ -415,34 +467,38 @@ def page(title, description, body, p="", og_image="img/og.jpg", canonical=""):
   <span>© 2026 Julien Nérée</span>
   <span>{" ".join(f'<a href="{u}" rel="noopener" target="_blank">{n}</a>' for n, u in C.SITE["links"])}</span>
 </footer>
-<dialog class="lb" aria-label="Image viewer">
-  <div class="lb-stage"></div>
-  <p class="lb-cap"><span class="lb-n label"></span><span class="lb-t"></span></p>
-  <button class="lb-btn lb-close" type="button" aria-label="Close">×</button>
-  <button class="lb-btn lb-prev" type="button" aria-label="Previous">←</button>
-  <button class="lb-btn lb-next" type="button" aria-label="Next">→</button>
-</dialog>
+{LIGHTBOX}
 </body>
 </html>
-'''
+"""
 
 
 def build_index():
     s = C.SITE
-    hm = media(s["hero_image"])
-    stats = "".join(f'<div><dt>{esc(a)}</dt><dd>{esc(b)}</dd></div>' for a, b in s["stats"])
-    intro = f'''
-<section class="intro wrap">
-  <div class="intro-text">
-    <h1>{esc(s["statement"])}</h1>
-    <p class="lede">{esc(s["sub"])}</p>
-    <dl class="stats">{stats}</dl>
+    v = asset_version(("assets/home.css", "assets/site.js"))
+    nav = "".join(f'<a href="#{i}">{n}</a>' for i, n in NAV)
+    fonts = "https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&display=swap"
+    body = hero_section() + now_section() + before_section() + photos_section() + videos_section() + about_section()
+    links = "".join(f'<a href="{u}" rel="noopener" target="_blank">{n}</a>' for n, u in s["links"])
+    html = f"""{head(s["title"], s["description"], "", "img/og.jpg", "", fonts, "home.css", v)}
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="#top">Julien Nérée</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><i></i><i></i></button>
+    <nav class="nav" id="site-nav" aria-label="Sections">{nav}</nav>
   </div>
-  <figure class="intro-img">{img_tag(hm, "", "(max-width: 900px) 100vw, 420px", s["hero_image"]["alt"], eager=True)}<figcaption>{esc(s["hero_image"]["cap"])}</figcaption></figure>
-</section>'''
-    body = (intro + now_section() + before_section() + "".join(company(c) for c in C.COMPANIES)
-            + videos_section() + writing_section() + photos_section() + about_section())
-    (ROOT / "index.html").write_text(page(s["title"], s["description"], body))
+</header>
+<main>{body}</main>
+<footer class="foot wrap">
+  <span>© 2026 Julien Nérée</span>
+  <span>{links}</span>
+</footer>
+{LIGHTBOX}
+</body>
+</html>
+"""
+    (ROOT / "index.html").write_text(html)
 
 
 PH = re.compile(r"\{\{(img|video):([^|}]+)\|?([^}]*)\}\}")
@@ -476,13 +532,13 @@ def build_articles():
         body = f'''
 <article class="article">
   <header class="a-head wrap-narrow">
-    <a class="back label" href="../#writing">← All writing</a>
+    <a class="back label" href="../">← Home</a>
     <p class="label">{esc(a["kind"])} · {esc(a["date"])}</p>
     <h1>{esc(a["title"])}</h1>
   </header>
   <div class="wrap-wide">{cover_html}</div>
   <div class="a-body wrap-narrow" data-gallery>{body_html}</div>
-  <p class="wrap-narrow a-end"><a href="../#writing">← All writing</a> · <a href="../">Home</a></p>
+  <p class="wrap-narrow a-end"><a href="../">← Home</a></p>
 </article>'''
         out = ROOT / a["slug"]
         out.mkdir(exist_ok=True)

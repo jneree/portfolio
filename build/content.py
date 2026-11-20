@@ -33,8 +33,7 @@ SITE = {
         ("10+ years", "building consumer hardware"),
         ("Red Dot", "Design Award 2026"),
     ],
-    "hero_image": img("Ryder/22_screenshot_2026-07-03_at_10.32.26_pm.png", "On the line at our assembly partner in Shenzhen, during Ryder One mass production.",
-                      crop=(840, 0, 2460, 2026)),
+    "portrait": img("me/julien-portrait.png", "Portrait of Julien Nérée"),
     "links": [
         ("LinkedIn", "https://www.linkedin.com/in/julneree/"),
         ("Instagram", "https://www.instagram.com/julien_neree/"),
@@ -348,6 +347,14 @@ COMPANIES = [
         },
     },
 ]
+
+# Home page: the order of the company cards, and each card's colour (top and bottom of its gradient).
+CARD_ORDER = ["ryder", "soundbrenner", "transcelestial"]
+CARD_TONES = {
+    "ryder": ("#EDEEF0", "#E2E4E8"),           # aluminium
+    "soundbrenner": ("#F0EBE3", "#E6DED2"),    # sandstone
+    "transcelestial": ("#E9EDE9", "#DCE3DD"),  # sage
+}
 
 VIDEOS = [
     ("WxOzGlUw5gI", "From the factory to your hands: we're finally shipping Ryder One"),
