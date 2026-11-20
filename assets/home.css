@@ -137,9 +137,10 @@ figcaption { margin-top: 12px; font-size: 13px; line-height: 1.45; color: var(--
 .stage-head .chev { flex: none; }
 .stage[data-open] .stage-head .chev { transform: rotate(180deg); }
 .stage-body { padding: 20px 0 8px; }
-.cat { margin-bottom: 48px; gap: 12px 40px; }
-.cat h4 { font-size: 15px; font-weight: 500; line-height: 1.4; }
-.cat > :last-child { flex-basis: 480px; }
+/* Each category: its title, then a row that runs edge to edge across the card */
+.cat { display: block; margin-bottom: 56px; }
+.cat h4 { margin-bottom: 20px; font-size: 15px; font-weight: 500; line-height: 1.4; }
+.cat .strip { margin: 0 calc(-1 * var(--pad)); }
 
 /* Photography */
 .photos { margin-top: 140px; padding: 130px 0 140px; background: var(--dark); color: var(--dark-fg); }
