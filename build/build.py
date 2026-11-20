@@ -390,8 +390,6 @@ def videos_section():
 def about_section():
     a = C.ABOUT
     pm = media(a["portrait"])
-    before = "".join(
-        f'<li><span>{y}</span><span>{esc(o)}<small>{esc(t)}</small></span></li>' for y, o, t in a["before"])
     links = "".join(f'<a href="{u}" rel="noopener" target="_blank">{n} ↗</a>' for n, u in C.SITE["links"])
     return f"""
 <section class="about wrap" id="about">
@@ -400,7 +398,6 @@ def about_section():
     <div class="about-text">{"".join(f'<p class="light">{esc(t)}</p>' for t in a["text"])}
       <p class="links">{links}</p></div>
   </div>
-  <div class="split timeline"><h3>Before</h3><ul>{before}</ul></div>
 </section>"""
 
 

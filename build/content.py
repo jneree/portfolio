@@ -78,8 +78,7 @@ NOW = {
         img("larkin/band-desk-1200.webp", "Larkin band."),
         img("larkin/band-sill-700.webp", "Larkin band, silver."),
         img("larkin/band-wrist-white-1400.webp", "On the wrist."),
-        img("larkin/app-chronicles-720.webp", "Chronicles: every day becomes a chapter."),
-        img("larkin/app-day-720.webp", "Day view: who you talked to, what came up."),
+        img("larkin/app4-hand2-2240.webp", "The Larkin app, with the band on the wrist."),
     ],
 }
 

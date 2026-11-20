@@ -76,24 +76,15 @@
    1280
   ]
  },
- "larkin-app-chronicles-720": {
-  "h": 1560,
+ "larkin-app4-hand2-2240": {
+  "h": 1267,
   "kind": "img",
-  "slug": "larkin-app-chronicles-720",
-  "w": 720,
+  "slug": "larkin-app4-hand2-2240",
+  "w": 2240,
   "widths": [
    640,
-   720
-  ]
- },
- "larkin-app-day-720": {
-  "h": 1560,
-  "kind": "img",
-  "slug": "larkin-app-day-720",
-  "w": 720,
-  "widths": [
-   640,
-   720
+   1280,
+   2048
   ]
  },
  "larkin-band-desk-1200": {
