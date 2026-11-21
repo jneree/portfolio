@@ -82,30 +82,19 @@
   });
 
   // Hint that the cards open: when the stack first comes into view, each card
-  // lifts open a little and settles back, one after the other.
-  const stack = $(".cards");
-  if (stack && cards.length > 1 && !reduceMotion) {
-    const LIFT = 44, DUR = 900, STEP = 320;
-    const bump = (t) => (t <= 0 || t >= 1 ? 0 : Math.sin(Math.PI * t) ** 2);
-    const run = () => {
-      const t0 = performance.now();
-      const frame = (now) => {
-        const t = now - t0;
-        // Card j moves down by the lifts of every card above it.
-        let y = 0;
-        cards.forEach((card, j) => {
-          if (j > 0) y += LIFT * bump((t - (j - 1) * STEP) / DUR);
-          card.style.transform = y ? `translateY(${y.toFixed(2)}px)` : "";
-        });
-        if (t < (cards.length - 2) * STEP + DUR) requestAnimationFrame(frame);
-        else cards.forEach((card) => { card.style.transform = ""; });
-      };
-      requestAnimationFrame(frame);
-    };
+  // opens a little to show the start of its story, then closes, one after the other.
+  cards.forEach((card) => {
+    $(".card-peek", card).addEventListener("click", () => $(".card-face", card).click());
+  });
+  if (cards.length > 1 && !reduceMotion) {
     const hint = new IntersectionObserver((entries) => {
       if (!entries.some((e) => e.isIntersecting)) return;
       hint.disconnect();
-      if (!cards.some((c) => c.hasAttribute("data-open"))) setTimeout(run, 250);
+      if (cards.some((c) => c.hasAttribute("data-open"))) return;
+      cards.forEach((card, i) => {
+        setTimeout(() => card.classList.add("hint"), 250 + i * 420);
+        setTimeout(() => card.classList.remove("hint"), 250 + i * 420 + 1100);
+      });
     }, { rootMargin: "0px 0px -25% 0px" });
     hint.observe(cards[1]);
   }

@@ -297,6 +297,7 @@ def card(co):
         </span>
         {img_tag(hero, "", "(max-width: 640px) 100vw, 640px", co["hero"]["alt"])}
       </button>
+      <div class="card-peek" aria-hidden="true"><div class="split"><div></div><p class="light">{esc(co["intro"])}</p></div></div>
       <div class="card-body" id="{cid}-body" hidden>
         <div class="split"><div aria-hidden="true"></div><div class="where"><p class="muted">{esc(co["place"])}</p>{site_link(co["url"])}</div></div>
         <div class="split card-intro"><div aria-hidden="true"></div><p class="light">{esc(co["intro"])}</p></div>

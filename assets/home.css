@@ -113,6 +113,21 @@ figcaption { margin-top: 12px; font-size: 13px; line-height: 1.45; color: var(--
 .card[data-open] .chev { transform: rotate(180deg); }
 
 .card-body { padding: 16px var(--pad) 72px; }
+/* The start of the story, hidden under the next card until hover or the hint */
+.card-peek {
+  height: 0; overflow: hidden; padding: 0 var(--pad); cursor: pointer;
+  transition: height .55s cubic-bezier(.3, .7, .2, 1);
+  -webkit-mask-image: linear-gradient(to bottom, #000 35%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 35%, transparent 100%);
+}
+.card-peek p { max-width: 27em; padding-top: 4px; }
+.card.hint .card-peek { height: 96px; }
+@media (hover: hover) {
+  .card:not([data-open]):hover .card-peek { height: 96px; }
+  .card-face > img { transition: transform .55s cubic-bezier(.3, .7, .2, 1); }
+  .card:not([data-open]):hover .card-face > img { transform: scale(1.015); }
+}
+.card[data-open] .card-peek { display: none; }
 .split { display: flex; flex-wrap: wrap; gap: 8px 40px; }
 .split > :first-child { flex: 0 0 200px; }
 .split > :last-child { flex: 999 1 420px; min-width: 0; }
